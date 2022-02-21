@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:background="#eee"
+    tools:paddingBottom="20dp"
+    tools:paddingTop="20dp"
+    tools:viewBindingIgnore="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/srl_classics_arrow"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="7.5dp"
+            android:src="@mipmap/app_ic_srl_arrow"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/srl_classics_progress"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="13dp"
+            tools:ignore="ContentDescription"
+            tools:src="@android:drawable/stat_notify_sync"
+            tools:tint="#616161" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/srl_classics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/srl_header_pulling"
+        android:textColor="#616161"
+        android:textSize="15sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,28 @@
+import com.myframe.version.VersionConfig
+
+plugins {
+    id "com.myframe.version"
+}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply from: rootProject.file('common_lib.gradle')
+
+
+//照片选择，图片浏览相关功能
+android {
+    // 限制当前module中的资源文件名称前缀
+    resourcePrefix "matisse_"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.appDependence.Base
+    implementation rootProject.ext.appDependence.Widget
+    implementation rootProject.ext.appDependence.Permission
+    implementation VersionConfig.scaleImageView
+    implementation "androidx.core:core-ktx:1.3.2"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}

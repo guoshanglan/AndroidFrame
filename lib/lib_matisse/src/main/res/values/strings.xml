@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="matisse_str_insert">插入</string>
+    <string name="matisse_go_to_setting">去设置</string>
+    <string name="matisse_take_photo_not_permission">获取相机权限失败，将导致无法正常拍摄，请打开设置页面手动授权</string>
+    <string name="matisse_create_cutter_file_error">创建文件失败</string>
+    <string name="matisse_cutter_file_error">剪裁失败</string>
+    <string name="matisse_image_transition">image_transition</string>
+    <string name="matisse_headView_transition">head_transition</string>
+    <string name="matisse_all_pictures">全部图片</string>
+    <string name="matisse_max_select_file">本次最多只能选择 %d 个文件</string>
+    <string name="matisse_cannot_same_time_select_pictures_and_videos">不能同时选择图片和视频</string>
+    <string name="matisse_no_app_that_supports_video_preview">没有支持视频预览的应用</string>
+    <string name="matisse_unsupported_file_type">不支持的文件类型</string>
+    <string name="matisse_move_and_crop">移动和裁剪</string>
+    <string name="matisse_complete">完成</string>
+</resources>

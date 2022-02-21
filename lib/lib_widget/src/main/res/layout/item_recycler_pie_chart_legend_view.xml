@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/tvLegendColor"
+        android:layout_width="7dp"
+        android:layout_height="7dp" />
+
+    <TextView
+        android:id="@+id/tvLegendTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/empty_tip"
+        android:textColor="@color/subtitle_text_color"
+        android:textSize="12sp"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/tvLegendValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/empty_tip"
+        android:textColor="@color/main_content_text_color"
+        android:textSize="12sp"
+        tools:ignore="SmallSp" />
+
+</LinearLayout>

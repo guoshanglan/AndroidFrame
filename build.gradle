@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: 'app-config.gradle'
+apply plugin: 'com.alibaba.arouter'
+
+buildscript {
+    ext.kotlin_version = '1.5.0'
+    repositories {
+        //        mavenCentral()
+//        jcenter()
+//        google()
+        //jcenter()和mavenCentral()aliyun镜像集合
+        maven { url "https://maven.aliyun.com/repository/public" }
+        //google()aliyun镜像
+        maven { url "https://maven.aliyun.com/repository/google" }
+        //本地maven
+        maven {
+            url uri('repo')
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.1'
+        // kotlin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // arouter
+        classpath 'com.alibaba:arouter-register:1.0.2'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    //项目需要的依赖
+    repositories {
+//        mavenCentral()
+//        jcenter()
+//        google()
+        //jcenter()和mavenCentral()aliyun镜像集合
+        maven { url "https://maven.aliyun.com/repository/public" }
+        //google()aliyun镜像
+        maven { url "https://maven.aliyun.com/repository/google" }
+        //git开源项目
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

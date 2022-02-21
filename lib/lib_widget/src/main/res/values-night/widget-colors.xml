@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--缺省提示文本-->
+    <color name="default_notice_text_color">#FF818191</color>
+    <!-- 通用顶部提示框背景色-->
+    <color name="top_tip_widget_bg">#FF25253B</color>
+    <!-- 通用顶部提示框文字颜色-->
+    <color name="top_tip_widget_text">#FFFFFFFF</color>
+    <!-- 普通步骤条连接线-->
+    <color name="step_normal_line_color">#818191</color>
+    <!-- 普通步骤点颜色-->
+    <color name="step_normal_point_color">#181823</color>
+    <!-- 步骤完成的字体颜色-->
+    <color name="step_completed_desc_text_color">#FFFFFFFF</color>
+    <!-- 悬停分类背景-->
+    <color name="suspension_decoration_background">#FF181823</color>
+    <!-- 阴影颜色-->
+    <color name="shadow_color">#1A000000</color>
+    <!-- 规范背景色上通用卡片背景-->
+    <color name="skin_card_background">#FF1E1E2C</color>
+    <!-- 网络连接断开提示背景 -->
+    <color name="network_error_bg">#FF471B1B</color>
+    <color name="network_error_text_color">#FFFFB3B3</color>
+    <!--TimeFilterWidget控件使用色-->
+    <color name="custom_time_border_color_normal">#FF1E1E2C</color>
+    <color name="custom_time_border_color_selected">#FF1E1E2C</color>
+</resources>

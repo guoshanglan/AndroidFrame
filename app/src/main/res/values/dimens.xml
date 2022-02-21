@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_fab_margin">24dp</dimen>
+    <dimen name="app_text_margin">16dp</dimen>
+    <dimen name="app_bottombar_height">49dp</dimen>
+</resources>

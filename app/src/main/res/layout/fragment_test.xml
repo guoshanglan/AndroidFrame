@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".ui.MainActivity"
+    tools:ignore="ResourceName">
+
+    <com.zhuorui.commonwidget.banner.MultipleBannerView
+        android:id="@+id/mkBanner"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:background="@color/skin_card_background"
+        app:bannerType="IPOCenterBanner"
+        app:bvp_auto_play="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:bvp_indicator_checked_color="@color/banner_check_color"
+        app:bvp_indicator_normal_color="@color/banner_normal_color"
+        app:bvp_interval="4000"
+        app:bvp_page_margin="13dp"
+        app:bvp_scroll_duration="800" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hello World!"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mkBanner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">pickerview</string>
+    <string name="ycuwq_datepicker_hour">时</string>
+    <string name="ycuwq_datepicker_minute">分</string>
+    <string name="day">日</string>
+    <string name="month">月</string>
+    <string name="year">年</string>
+</resources>

@@ -1,0 +1,11 @@
+import com.myframe.version.VersionConfig
+plugins {
+    id "com.myframe.version"
+}
+apply plugin: 'com.android.library'
+apply from: rootProject.file('common_lib.gradle')
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation VersionConfig.appcompat
+}

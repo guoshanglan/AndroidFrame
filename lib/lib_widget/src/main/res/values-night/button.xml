@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    tips : 该文件资源主要用于通用性按钮交互状态UI规范, 非UI规范调整 , 不要擅自添加修改该文件-->
+
+    <!-- 次按钮1 -->
+    <!-- 背景色-按压 -->
+    <color name="sec1_button_pressed_color">#FF1E1E2C</color>
+
+    <!--  次按钮2  -->
+    <!--  背景色-默认  -->
+    <color name="sec2_button_default_color">#FF2C2E43</color>
+    <!--  背景色-按压  -->
+    <color name="sec2_button_pressed_color">#FF1E1E2C</color>
+    <!--  背景色-禁用  -->
+    <color name="sec2_button_useless_color">#FF1E1E2C</color>
+    <!--  文字色-默认  -->
+    <color name="sec2_button_text_color">#FFFFFFFF</color>
+    <!--  文字色-按压  -->
+    <color name="sec2_button_pressed_text_color">#FFFFFFFF</color>
+    <!--  文字色-禁用  -->
+    <color name="sec2_button_useless_text_color">#66FFFFFF</color>
+
+    <!--  次按钮3  -->
+    <!--  背景色-默认  -->
+    <color name="sec3_button_default_color">#FF1E1E2C</color>
+    <!--  背景色-按压  -->
+    <color name="sec3_button_pressed_color">#FF1E1E2C</color>
+    <!--  背景色-禁用  -->
+    <color name="sec3_button_useless_color">#FF1E1E2C</color>
+    <!--  文字色-默认  -->
+    <color name="sec3_button_text_color">#FFFFFFFF</color>
+    <!--  文字色-按压  -->
+    <color name="sec3_button_pressed_text_color">#FFFFFFFF</color>
+    <!--  文字色-禁用  -->
+    <color name="sec3_button_useless_text_color">#66FFFFFF</color>
+
+    <!--  黄色按钮  -->
+    <!--  背景色-禁用  -->
+    <color name="yel_button_useless_color">#FF5B3610</color>
+    <!--  文字色-禁用  -->
+    <color name="yel_button_useless_text_color">#FFAD9A87</color>
+
+    <!--  黑白按钮  -->
+    <!--  背景色-默认  -->
+    <color name="bw_button_default_color">#FF1E1E2C</color>
+    <!--  背景色-按压  -->
+    <color name="bw_button_pressed_color">#FF16171A</color>
+    <!--  背景色-禁用  -->
+    <color name="bw_button_useless_color">#FF1E1E2C</color>
+    <!--  文字色-默认  -->
+    <color name="bw_button_text_color">#FFFFFFFF</color>
+    <!--  文字色-禁用  -->
+    <color name="bw_button_useless_text_color">#FF444444</color>
+
+</resources>

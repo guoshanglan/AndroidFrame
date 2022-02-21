@@ -1,0 +1,59 @@
+import com.myframe.version.VersionConfig
+
+plugins {
+    id "com.myframe.version"
+}
+
+apply plugin: 'com.android.library'
+apply from: rootProject.file('common_module.gradle')
+
+
+android {
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    // fragment库
+    api rootProject.ext.appDependence.Navgation
+    api rootProject.ext.appDependence.Serveice
+    api rootProject.ext.appDependence.Skin
+    api VersionConfig.multidex
+    api VersionConfig.kotlin
+    api VersionConfig.rxjava
+    api VersionConfig.rxandroid
+    api VersionConfig.androidxcore
+    implementation VersionConfig.retrofitAdapter
+    api VersionConfig.rxrelay
+    api VersionConfig.fastJson
+    api VersionConfig.okhttp3
+    api VersionConfig.okhttp3LogInterceptor
+    api VersionConfig.retrofit
+    implementation VersionConfig.kotlinxCoroutinesAdapter
+    implementation VersionConfig.kotlinxCoroutinesCore
+    implementation VersionConfig.kotlinxCoroutinesAndroid
+
+    api VersionConfig.converterGson
+    api VersionConfig.androidproperties
+    api VersionConfig.appcompat
+    api VersionConfig.supportDesign
+    api VersionConfig.recyclerview
+    api VersionConfig.constraintLayout
+    api VersionConfig.glide
+    api VersionConfig.arouter
+    api VersionConfig.autosize
+    api VersionConfig.lifecycleViewModel
+    api VersionConfig.lifecycleExtensions
+    api VersionConfig.mmkv
+    api VersionConfig.relinker
+    kapt VersionConfig.arouterCompiler
+    annotationProcessor VersionConfig.glideCompiler
+
+    implementation VersionConfig.zxing
+}

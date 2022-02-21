@@ -1,0 +1,7 @@
+apply from: rootProject.file('common_module.gradle')
+apply plugin: 'com.alibaba.arouter'
+//apply plugin: 'ZRPlugin'
+
+dependencies {
+    //debugImplementation rootProject.ext.appDependence.ZrDebug
+}

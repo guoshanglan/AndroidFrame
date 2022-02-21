@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhuorui.commonwidget.ZRLoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logind"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_loading"
+    android:minWidth="90dp"
+    android:minHeight="90dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="14dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="14dp"
+    app:msg_text="@string/load_state_default"
+    app:msg_text_color="@android:color/white"
+    tools:viewBindingIgnore="true" />
+
+

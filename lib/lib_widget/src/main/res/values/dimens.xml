@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--用于模块标题-->
+    <dimen name="titleText">18sp</dimen>
+    <!--用于重要标题、导航栏文字-->
+    <dimen name="importantText">16sp</dimen>
+    <!--用于主要内容、段落文本等-->
+    <dimen name="contentText">14sp</dimen>
+    <!--用于提示类文字或其他次要文字信息-->
+    <dimen name="secondaryText">12sp</dimen>
+    <!--用于底部标签栏文字或特殊说明性文字-->
+    <dimen name="explainText">10sp</dimen>
+    <!--通用分隔线高度-->
+    <dimen name="division_height">0.6dp</dimen>
+    <!--通用dialog 圆角大小-->
+    <dimen name="dialog_background_radius">4dp</dimen>
+    <!--通用button 圆角大小-->
+    <dimen name="button_radius">4dp</dimen>
+    <!--通用button 文字大小-->
+    <dimen name="button_def_textsize">16sp</dimen>
+
+    <!--TODO 根据UI设计稿的字体粗细，TextView中需设置的属性如下-->
+    <!--1.粗体“PingFang-SC-Bold”，字重为“Bold” == android:textStyle="bold"-->
+    <!--2.中等体“PingFang-SC-Medium”，字重为“Medium” == android:fontFamily="sans-serif-medium"-->
+    <!--3.常规体“PingFang-SC-Regular”，字重为“Regular” == 无需加如何属性，直接默认-->
+</resources>

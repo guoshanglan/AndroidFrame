@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2017 Zhihu Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+
+    //====================================== Theme Zhihu ===========================================
+
+
+    <style name="Matisse.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/matisse_primary</item>
+        <item name="colorPrimaryDark">@color/matisse_primary_dark</item>
+        <item name="matisse_toolbar">@style/matisse_Toolbar</item>
+        <item name="matisse_album_title_color">@color/main_content_text_color</item>
+        <item name="matisse_album_count_color">@color/placeholder_text_color</item>
+        <item name="matisse_album_element_color">@android:color/white</item>
+        <item name="matisse_album_placeholder">@color/matisse_album_placeholder</item>
+        <item name="matisse_album_emptyView_img">@mipmap/ic_nodata</item>
+        <item name="matisse_album_emptyView_textColor">@color/matisse_album_empty_color</item>
+        <item name="matisse_item.placeholder">@color/main_tab_background</item>
+        <item name="matisse_item_bg">@color/matisse_item_bgColor</item>
+        <item name="matisse_item_bd">@color/matisse_item_bdColor</item>
+        <item name="matisse_page_bg">@color/matisse_page_bg</item>
+        <item name="matisse_bottomToolbar_bg">@color/matisse_bottom_toolbar_bg</item>
+        <item name="matisse_preview_textColor">@color/matisse_bottom_toolbar_preview</item>
+        <item name="matisse_apply_textColor">@color/matisse_bottom_toolbar_preview</item>
+        <item name="matisse_preview_back_textColor">@color/matisse_preview_back_text</item>
+        <item name="matisse_preview_apply_textColor">@color/matisse_bottom_toolbar_apply</item>
+        <item name="matisse_listPopupWindowStyle">@style/matisse_Popup.Zhihu</item>
+        <item name="matisse_capture_textColor">@color/matisse_capture</item>
+    </style>
+
+
+
+    <style name="matisse_Popup.Zhihu" parent="Widget.AppCompat.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/main_background</item>
+    </style>
+
+    //===================================== Theme Dracula ==========================================
+
+    <style name="Matisse.Dracula" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/matisse_primary</item>
+        <item name="colorPrimaryDark">@color/matisse_primary_dark</item>
+        <item name="matisse_toolbar">@style/matisse_Toolbar</item>
+        <item name="matisse_album_title_color">@color/main_content_text_color</item>
+        <item name="matisse_album_count_color">@color/placeholder_text_color</item>
+        <item name="matisse_album_element_color">@android:color/white</item>
+        <item name="matisse_album_placeholder">@color/matisse_album_placeholder</item>
+        <item name="matisse_album_emptyView_img">@mipmap/ic_nodata</item>
+        <item name="matisse_album_emptyView_textColor">@color/matisse_album_empty_color</item>
+        <item name="matisse_item.placeholder">@color/main_tab_background</item>
+        <item name="matisse_item_bg">@color/matisse_item_bgColor</item>
+        <item name="matisse_item_bd">@color/matisse_item_bdColor</item>
+        <item name="matisse_page_bg">@color/matisse_page_bg</item>
+        <item name="matisse_bottomToolbar_bg">@color/matisse_bottom_toolbar_bg</item>
+        <item name="matisse_preview_textColor">@color/matisse_bottom_toolbar_preview</item>
+        <item name="matisse_apply_textColor">@color/matisse_bottom_toolbar_apply</item>
+        <item name="matisse_preview_back_textColor">@color/matisse_preview_back_text</item>
+        <item name="matisse_preview_apply_textColor">@color/matisse_bottom_toolbar_apply</item>
+        <item name="android:listPopupWindowStyle">@style/matisse_Popup.Dracula</item>
+        <item name="matisse_listPopupWindowStyle">@style/matisse_Popup.Dracula</item>
+        <item name="matisse_capture_textColor">@color/matisse_capture</item>
+    </style>
+
+    <style name="matisse_Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+
+    <style name="matisse_Popup.Dracula" parent="Widget.AppCompat.ListPopupWindow">
+        <item name="android:popupBackground">@color/main_background</item>
+    </style>
+
+</resources>

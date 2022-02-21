@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--黑白dialog 通用模块按压颜色无圆角-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/dialog_daynight_module_pressed_background" android:state_pressed="true" />
+<!--    <item android:drawable="@color/dialog_daynight_module_pressed_background" android:state_selected="true" />-->
+</selector>

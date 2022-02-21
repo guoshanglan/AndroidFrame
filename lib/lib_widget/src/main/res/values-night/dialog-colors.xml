@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义关于弹窗的颜色，不允许随意更改-->
+    <!--用于弹窗阴影色-->
+    <color name="dialog_shadow_color">#4D000000</color>
+
+    <!--黑白适配 dialog-->
+    <!--黑白dialog 编号文字色 01-->
+    <color name="dialog_daynight_text_color_01">#FFFFFFFF</color>
+    <!--黑白dialog 编号文字色 02-->
+    <color name="dialog_daynight_text_color_02">#FF818191</color>
+    <!--黑白dialog 编号文字色 03-->
+    <color name="dialog_daynight_text_color_03">#FF818191</color>
+    <!--黑白dialog 编号文字色 04-->
+    <color name="dialog_daynight_text_color_04">#FFFFFFFF</color>
+    <!--黑白dialog 背景色-->
+    <color name="dialog_daynight_background">#FF1E1E2C</color>
+    <!--黑白dialog 背景色下分隔线-->
+    <color name="dialog_daynight_division_background">#FF232731</color>
+    <!--黑白dialog 模块按压颜色-->
+    <color name="dialog_daynight_module_pressed_background">#FF121216</color>
+    <!--取消按钮文字颜色-->
+    <color name="dialog_daynight_cancel_button">#FF666666</color>
+    <!--确定按钮文字颜色-->
+    <color name="dialog_daynight_confirm_button">#FF5A67D9</color>
+    <!--黑白dialog 规范dialog卡片背景色-->
+    <color name="dialog_daynight_skin_card_background">#2A2A3C</color>
+</resources>

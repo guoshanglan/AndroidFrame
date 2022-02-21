@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FlowParamListView">
+
+    </declare-styleable>
+
+    <declare-styleable name="FlowParamView">
+        <attr name="fpv_title_width" format="dimension|reference" />
+        <attr name="fpv_title_img_width" format="dimension|reference" />
+        <attr name="fpv_title_img_hight" format="dimension|reference" />
+        <attr name="fpv_title_text_style" format="reference" />
+        <attr name="fpv_content_text_style" format="reference" />
+        <attr name="fpv_item_space" format="dimension|reference" />
+        <attr name="fpv_item_align" format="enum">
+            <enum name="justify" value="0" />
+            <enum name="left" value="1" />
+            <enum name="center_horizontal" value="2" />
+        </attr>
+        <attr name="fpv_group_item_space" format="dimension|reference" />
+        <attr name="fpv_divider_color" format="color|reference" />
+        <attr name="fpv_divider_hight" format="dimension|reference" />
+        <attr name="fpv_divider_margin_left" format="dimension|reference" />
+        <attr name="fpv_divider_margin_top" format="dimension|reference" />
+        <attr name="fpv_divider_margin_right" format="dimension|reference" />
+        <attr name="fpv_divider_margin_bottom" format="dimension|reference" />
+        <attr name="fpv_content_margin_left" format="dimension|reference" />
+        <attr name="fpv_content_margin_right" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowParamItemView">
+        <attr name="fpiv_title_text" format="string|reference" />
+        <attr name="fpiv_title_width" format="dimension|reference" />
+        <attr name="fpiv_title_text_style" format="reference" />
+        <attr name="fpiv_title_img_width" format="dimension|reference" />
+        <attr name="fpiv_title_img_hight" format="dimension|reference" />
+        <attr name="fpiv_content_text" format="string|reference" />
+        <attr name="fpiv_content_text_style" format="reference" />
+        <attr name="fpiv_item_space" format="dimension|reference" />
+        <attr name="fpiv_item_align" format="enum">
+            <enum name="justify" value="0" />
+            <enum name="left" value="1" />
+            <enum name="center_horizontal" value="2" />
+        </attr>
+        <attr name="fpiv_group_item_space" format="dimension|reference" />
+    </declare-styleable>
+
+</resources>

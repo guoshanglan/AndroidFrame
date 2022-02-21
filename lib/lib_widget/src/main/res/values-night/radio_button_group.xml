@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="radio_button_group_normal_bg">#FF1E1E2C</color>
+    <color name="radio_button_group_selected_bg">#FF3F4477</color>
+    <color name="radio_button_group_selected_text_color">#FFFFFFFF</color>
+</resources>

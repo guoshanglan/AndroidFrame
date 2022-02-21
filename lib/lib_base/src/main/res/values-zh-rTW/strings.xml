@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="network_anomaly">網路不稳定，請稍後重試</string>
+    <string name="press_again_exit">再按一次退出%s</string>
+    <string name="mintues_ahead">%s分鐘前</string>
+    <string name="hours_ahead">%s小時前</string>
+    <string name="months_ahead">%s月前</string>
+    <string name="days_ahead">%s天前</string>
+    <string name="times_ago">剛剛</string>
+    <string name="yesterday">昨日</string>
+    <string name="base_lanscape_unlock_tip">點擊鎖定螢幕</string>
+    <string name="base_lanscape_locked_tip">螢幕已鎖定</string>
+    <string name="base_invalid_link">無效鏈接</string>
+</resources>

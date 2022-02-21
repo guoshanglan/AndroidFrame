@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--公共属性-->
+    <attr name="zr_left_icon" format="reference" />
+    <attr name="zr_layoutWidth" format="reference|dimension" />
+    <attr name="zr_layoutHight" format="reference|dimension" />
+    <attr name="zr_iconWidth" format="dimension" />
+    <attr name="zr_iconHight" format="dimension" />
+    <attr name="zr_iconSrc" format="reference" />
+    <attr name="zr_iconVisible" format="boolean" />
+    <attr name="zr_titleWidthBaseline" format="boolean" />
+    <attr name="zr_dividerVisible" format="boolean" />
+    <attr name="zr_text" format="reference|string" />
+    <attr name="zr_textColor" format="reference|color" />
+    <attr name="zr_textSize" format="reference|dimension" />
+    <attr name="zr_background" format="reference" />
+    <attr name="zr_hintColor" format="reference|color" />
+    <attr name="text_size" format="dimension" />
+
+    <!--  WebView页面属性  -->
+    <attr name="zr_topbar_bg" format="reference|color" />
+    <attr name="zr_topbar_back_res" format="reference" />
+    <attr name="zr_topbar_title_color" format="color" />
+
+    <declare-styleable name="StateButton">
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference" />
+        <attr name="pressedTextColor" format="color|reference" />
+        <attr name="unableTextColor" format="color|reference" />
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference" />
+        <attr name="strokeDashGap" format="dimension|reference" />
+        <attr name="normalStrokeWidth" format="dimension|reference" />
+        <attr name="pressedStrokeWidth" format="dimension|reference" />
+        <attr name="unableStrokeWidth" format="dimension|reference" />
+        <attr name="normalStrokeColor" format="color|reference" />
+        <attr name="pressedStrokeColor" format="color|reference" />
+        <attr name="unableStrokeColor" format="color|reference" />
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference" />
+        <attr name="pressedBackgroundColor" format="color|reference" />
+        <attr name="unableBackgroundColor" format="color|reference" />
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference" />
+        <attr name="round" format="boolean|reference" />
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="QuickIndexBar">
+        <attr name="text_normal_color" format="color" />
+        <attr name="text_press_color" format="color" />
+        <attr name="text_size" />
+        <attr name="bg_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ZhuoRuiTopBar">
+        <attr name="zr_topbarTitle" format="string|reference" />
+        <attr name="zr_topbarTitleColor" format="color" />
+        <attr name="zr_topbarSubTitle" format="string|reference" />
+        <attr name="zr_paddingLeft" format="dimension|reference" />
+        <attr name="zr_paddingRight" format="dimension|reference" />
+        <attr name="zr_isBack" format="boolean" />
+        <attr name="zr_isRefresh" format="boolean" />
+        <attr name="zr_background" />
+        <attr name="zr_backResourceId" format="reference" />
+        <attr name="zr_popResourceId" format="reference" />
+        <attr name="zr_leftBtnResourceId" format="reference" />
+        <attr name="zr_rightBtnResourceId" format="reference" />
+        <attr name="zr_right2BtnResourceId" format="reference" />
+        <attr name="zr_topbarRightTextColor" format="color" />
+        <attr name="zr_fitsSystemWindowsPadding" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRTitleEditText">
+        <attr name="zr_teditTitle" format="string|reference" />
+        <attr name="zr_teditText" format="string|reference" />
+        <attr name="zr_teditHint" format="string|reference" />
+        <attr name="zr_teditOrientation" format="enum">
+            <enum name="HORIZONTAL" value="0" />
+            <enum name="VERTICAL" value="1" />
+        </attr>
+        <attr name="zr_teditType" format="enum">
+            <enum name="ID_CARD" value="1" />
+            <enum name="BANK_CARD" value="2" />
+            <enum name="EMAIL" value="3" />
+            <enum name="FORMAT_NUMBER" value="4" />
+        </attr>
+        <attr name="zr_iconWidth" />
+        <attr name="zr_iconHight" />
+        <attr name="zr_iconSrc" />
+        <attr name="zr_iconVisible" />
+        <attr name="zr_titleWidthBaseline" />
+        <attr name="zr_dividerVisible" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRTitleTextView">
+        <attr name="zr_ttextviewTitle" format="string|reference" />
+        <attr name="zr_ttextviewText" format="string|reference" />
+        <attr name="zr_ttextviewHint" format="string|reference" />
+        <attr name="zr_ttextviewOrientation" format="enum">
+            <enum name="HORIZONTAL" value="0" />
+            <enum name="VERTICAL" value="1" />
+        </attr>
+        <attr name="zr_iconWidth" />
+        <attr name="zr_iconHight" />
+        <attr name="zr_iconSrc" />
+        <attr name="zr_iconVisible" />
+        <attr name="zr_titleWidthBaseline" />
+        <attr name="zr_dividerVisible" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRSwitch">
+        <attr name="zr_switchShadowEffect" format="boolean" />
+        <attr name="zr_switchUncheckCircleColor" format="color|reference" />
+        <attr name="zr_switch_checkCircleColor" format="color|reference" />
+        <attr name="zr_switchShadowRadius" format="dimension|reference" />
+        <attr name="zr_switchShadowOffset" format="dimension|reference" />
+        <attr name="zr_switchShadowColor" format="color|reference" />
+        <attr name="zr_switchUncheckColor" format="color|reference" />
+        <attr name="zr_switchCheckedColor" format="color|reference" />
+        <attr name="zr_switchBorderWidth" format="dimension|reference" />
+        <attr name="zr_switchCheckLineColor" format="color|reference" />
+        <attr name="zr_switchButtonColor" format="color|reference" />
+        <attr name="zr_switchEffectDuration" format="integer|reference" />
+        <attr name="zr_switchChecked" format="boolean" />
+        <attr name="zr_switchShowIndicator" format="boolean" />
+        <attr name="zr_switchEnableEffect" format="dimension|reference" />
+    </declare-styleable>
+
+
+    <!-- ZRLoadingTextView -->
+    <declare-styleable name="ZRLoadingTextView">
+        <attr name="load_text" format="string" />
+        <attr name="text_size" />
+        <attr name="text_color_normal" format="color" />
+        <attr name="text_color_hightlight" format="color" />
+        <attr name="direction">
+            <enum name="left" value="1" />
+            <enum name="top" value="2" />
+            <enum name="right" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ZRSearchView">
+        <attr name="zr_hint" format="string|reference" />
+        <attr name="zr_clear_icon" format="reference" />
+        <attr name="zr_background" />
+        <attr name="zr_left_icon" />
+        <attr name="zr_textColor" />
+        <attr name="zr_hintColor" />
+        <attr name="zr_textSize" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRAmountTextView">
+        <attr name="zr_showSymbol" format="boolean" />
+        <attr name="zr_minDecimalDigit" format="integer" />
+        <attr name="zr_maxDecimalDigit" format="integer" />
+        <attr name="zr_relativeDecimal" format="boolean" />
+        <attr name="zr_relative_size_scale" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRStockTextView">
+        <attr name="zr_showPrecentSymbol" format="boolean" />
+        <attr name="zr_showPrecentUpDown" format="boolean" />
+        <attr name="zr_fixed_text_color" format="boolean" />
+        <attr name="zr_isForceUpDown" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ZrCompareTextView">
+        <attr name="zr_spancolor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatEditTextView">
+        <attr name="integer_part" format="integer" />
+        <attr name="decimal_part" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRAutoSizeTextView">
+        <attr name="textSizePx" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRInfoCellBar">
+        <attr name="logo_icon" format="reference" />
+        <attr name="info_tips" format="string" />
+        <attr name="cell_tips" format="string" />
+        <attr name="show_space" format="boolean" />
+        <attr name="show_cell_info" format="boolean" />
+        <attr name="cell_tips_color" format="color" />
+        <attr name="cell_tips_icon" format="reference" />
+        <attr name="cell_tips_textSize" format="dimension|reference" />
+        <attr name="cell_info_textSize" format="dimension|reference" />
+    </declare-styleable>
+
+    <!--loading转圈控件-->
+    <declare-styleable name="ZRLoadingView">
+        <attr name="msg_text" format="string|reference" />
+        <attr name="msg_text_color" format="color" />
+        <attr name="zr_CircleSize" format="dimension|reference" />
+        <attr name="zr_StopDrawable" format="reference" />
+        <attr name="zr_RotateDrawable" format="reference" />
+        <attr name="zr_DelayStopTime" format="integer" />
+        <attr name="android:orientation" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <!--自动缩放TextView-->
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="textZoomFactor" format="float" />
+        <attr name="minTextSize" format="dimension|reference" />
+        <attr name="isFixedSize" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRStickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+
+    <item name="zr_menubutton_title" type="id" />
+
+    <declare-styleable name="MenuButton">
+        <attr name="zr_textColor" />
+        <attr name="zr_textSize" />
+        <attr name="zr_text" />
+        <attr name="zr_iconSrc" />
+        <attr name="zr_popWidth" format="dimension" />
+        <attr name="zr_popHight" format="dimension" />
+        <attr name="zr_popMaxItem" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRDrawableTextView">
+        <attr name="zr_drawable_height" format="float" />
+        <attr name="zr_drawable_width" format="float" />
+        <attr name="zr_drawable_left" format="reference" />
+        <attr name="zr_drawable_top" format="reference" />
+        <attr name="zr_drawable_right" format="reference" />
+        <attr name="zr_drawable_bottom" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FastSortView">
+        <attr name="fsv_title" format="string" />
+        <attr name="fsv_title_color" format="color" />
+        <attr name="fsv_title_size" format="dimension" />
+        <attr name="fsv_gravity" format="enum">
+            <enum name="center" value="1" />
+            <enum name="left_vertical_center" value="2" />
+            <enum name="right_vertical_center" value="3" />
+        </attr>
+        <attr name="fsv_up_icon" format="reference" />
+        <attr name="fsv_down_icon" format="reference" />
+        <attr name="fsv_normal_icon" format="reference" />
+        <attr name="fsv_sort_icon_width" format="dimension" />
+        <attr name="fsv_sort_icon_height" format="dimension" />
+
+        <attr name="fsv_sort_status" format="enum">
+            <enum name="normal" value="1" />
+            <enum name="up" value="2" />
+            <enum name="down" value="3" />
+        </attr>
+
+        <attr name="fsv_icon_margin_left" format="dimension" />
+
+        <attr name="fsv_sort_mode" format="enum">
+            <!-- 标准模式，包括DOWN UP NORMAL三种状态-->
+            <enum name="standard" value="1" />
+            <!-- 标准模式，包括DOWN UP两种种状态-->
+            <enum name="upDown" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ZRMarqueeView">
+        <attr name="mv_textColor" format="color" />
+        <attr name="mv_textSize" format="float" />
+        <attr name="mv_isRepeat" format="boolean" />
+        <attr name="mv_speed" format="integer" />
+        <attr name="mv_startPoint" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+        </attr>
+        <attr name="mv_scroll_direction" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RegionNumberEditText">
+        <attr name="rn_min" format="integer" /><!--数字输入最小值-->
+        <attr name="rn_max" format="integer" /><!--数字输入最大值-->
+    </declare-styleable>
+
+    <declare-styleable name="ZRIndexBar">
+        <attr name="indexBarTextSize" format="dimension" />
+        <attr name="indexBarPressBackground" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ArrowShadowContainerView">
+        <attr name="asc_arrow_width" format="dimension" />
+        <attr name="asc_arrow_height" format="dimension" />
+        <attr name="asc_background_color" format="color|reference" />
+        <attr name="asc_bg_radius" format="dimension" />
+        <attr name="asc_arrow_x_offset" format="dimension" />
+        <attr name="asc_shadow_color" format="color" />
+        <attr name="asc_shadow_radius" format="dimension" />
+        <attr name="asc_arrow_position" format="enum">
+            <enum name="top" value="1" />
+            <enum name="bottom" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ZRHorizontalStepView">
+        <attr name="count" format="integer" />
+        <attr name="normal_point" format="reference" />
+        <attr name="ongoing_point" format="reference" />
+        <attr name="completed_point" format="reference" />
+        <!--线条的宽度-->
+        <attr name="line_width" format="dimension" />
+        <!--未完成的线条的颜色-->
+        <attr name="line_normal_color" format="color" />
+        <!--已完成的线条的颜色-->
+        <attr name="line_completed_color" format="color" />
+        <!--说明文字的大小以及颜色-->
+        <attr name="desc_textSize" format="dimension" />
+        <attr name="desc_normal_textColor" format="color" />
+        <attr name="desc_ongoing_textColor" format="color" />
+        <attr name="desc_completed_textColor" format="color" />
+        <!--步骤的进度条距离说明文字的距离-->
+        <attr name="distance_from_text" format="dimension" />
+        <!--普通的步骤点，进行中的步骤点和已经完成的步骤点的宽高-->
+        <attr name="normal_point_width" format="dimension" />
+        <attr name="ongoing_point_width" format="dimension" />
+        <attr name="completed_point_width" format="dimension" />
+
+        <!--文字处于上方或者下方：0下面，1上面-->
+        <attr name="text_location" format="enum">
+            <enum name="down" value="0" />
+            <enum name="up" value="1" />
+        </attr>
+        <!--步骤项宽高的计算方式-->
+        <attr name="stepWidthMode" format="enum">
+            <!--根据View的宽度均分-->
+            <enum name="average" value="0" />
+            <!--自己设置的宽度，这种模式下，要设置步骤项的宽度，如果设置依旧是average-->
+            <enum name="fixed" value="1" />
+        </attr>
+        <!--步骤项的宽度-->
+        <attr name="step_width" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRImageView">
+        <attr name="is_fixed_ratio" format="boolean" />
+        <attr name="width_height_ratio" format="float" />
+        <attr name="is_circle" format="boolean" />
+        <attr name="is_cover_src" format="boolean" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="corner_top_left_radius" format="dimension" />
+        <attr name="corner_top_right_radius" format="dimension" />
+        <attr name="corner_bottom_left_radius" format="dimension" />
+        <attr name="corner_bottom_right_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="mask_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ZRInputPasswordView">
+        <!-- 密码位数-->
+        <attr name="ipv_password_digits" format="integer" />
+        <!-- 是否隐藏输入内容，使用黑点代替-->
+        <attr name="ipv_hide_input" format="boolean" />
+        <!-- 输入框样式-->
+        <attr name="ipv_border_mode" format="enum">
+            <!-- 边框模式-->
+            <enum name="border" value="1" />
+            <!-- 下划线模式-->
+            <enum name="underline" value="2" />
+        </attr>
+        <!-- 每个输入框的高度-->
+        <attr name="ipv_item_height" format="dimension" />
+        <!-- 每个输入框的宽度度-->
+        <attr name="ipv_item_width" format="dimension" />
+        <!-- 每个输入框边框样式的宽度，当ipv_border_mode=border才有效-->
+        <attr name="ipv_border_width" format="dimension" />
+        <!-- 每个输入框边框样式的颜色，当ipv_border_mode=border才有效-->
+        <attr name="ipv_border_color" format="color" />
+        <!-- 每个输入框输入到位时，是否需要显示游标-->
+        <attr name="ipv_open_cursor" format="boolean" />
+        <!-- 每个输入框输入到位时，游标颜色-->
+        <attr name="ipv_cursor_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRLoadImageView">
+        <attr name="zr_radius" format="reference|dimension" />
+        <attr name="zr_background" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRRadioButton">
+        <attr name="rb_outCircleRadius" format="dimension|reference" />
+        <attr name="rb_innerCircleRadius" format="dimension|reference" />
+        <attr name="rb_isChecked" format="boolean" />
+        <attr name="rb_checkColor" format="color|reference" />
+        <attr name="rb_unCheckColor" format="color|reference" />
+        <attr name="rb_title" format="string|reference" />
+        <attr name="rb_gap" format="dimension|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CommentOptionView">
+        <attr name="option_title" format="string|reference" />
+        <attr name="option_content" format="string|reference" />
+        <attr name="option_content_gravity" format="integer">
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+        </attr>
+        <attr name="has_more_btn" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ZRFlowLayout">
+        <attr name="horizontalSpace" format="dimension|reference" />
+        <attr name="verticalSpace" format="reference|dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ZRSharpView">
+        <attr name="sv_backgroundColor" format="color" />
+        <attr name="sv_isRoundCorner" format="boolean" />
+        <attr name="sv_roundRadius" format="dimension" />
+        <attr name="sv_isReverse" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <attr name="el_orientation" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ZRDecorationTitleBar">
+        <!-- 内边相关属性-->
+        <attr name="dtb_paddingTop" format="dimension" />
+        <attr name="dtb_paddingBottom" format="dimension" />
+        <attr name="dtb_paddingLeft" format="dimension" />
+        <attr name="dtb_paddingRight" format="dimension" />
+
+        <!-- Title相关属性-->
+        <attr name="dtb_title" format="string|reference" />
+        <attr name="dtb_titleSize" format="dimension|reference" />
+        <attr name="dtb_titleColor" format="color|reference" />
+
+        <!--副标题相关属性-->
+        <attr name="dtb_subTitleText" format="string|reference" />
+        <attr name="dtb_subTitleColor" format="color|reference" />
+
+        <!--右边箭头相关属性-->
+        <attr name="dtb_showRightArrow" format="boolean" />
+        <attr name="dtb_rightArrowResource" format="reference" />
+
+
+        <!--右边文字相关属性，如果存在右边箭头，那么文字在箭头的左边-->
+        <attr name="dtb_rightText" format="string|reference" />
+        <attr name="dtb_rightTextColor" format="color|reference" />
+        <attr name="dtb_rightTextSize" format="dimension|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ZRTitleExpandableView">
+        <attr name="expandableBackground" format="reference" />
+        <attr name="expandableLayoutResource" format="reference" />
+        <attr name="expanded" format="boolean" />
+        <attr name="expandableTitle" format="string|reference" />
+        <attr name="expandableTitleColor" format="color|reference" />
+        <attr name="expandableTitleSize" format="dimension|reference" />
+        <!--是否需要顶部的分割线-->
+        <attr name="expandableTopDivide" format="boolean" />
+        <!--顶部的分割线颜色-->
+        <attr name="expandableTopDivideColor" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ZREllipsizeTextView">
+        <attr name="etv_maxLines" format="integer" />
+        <attr name="etv_ellipsize_color" format="color|reference" />
+        <attr name="etv_ellipsize_text" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawableWidth" format="dimension" />
+        <attr name="drawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PeriodsRadioButton">
+        <attr name="periodColor" format="color|reference" />
+        <attr name="periodWidth" format="dimension" />
+        <attr name="periodHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+    <!--占位图-->
+    <declare-styleable name="ZRPlaceholderView">
+        <attr name="mode" format="enum">
+            <enum name="NORMAL" value="0" />
+            <enum name="MINIMALISM" value="1" />
+            <enum name="BUTTON" value="2" />
+        </attr>
+        <!--icon属性-->
+        <attr name="iconRes" format="reference" />
+        <attr name="iconWidth" format="dimension|reference" />
+        <attr name="iconHeight" format="dimension|reference" />
+        <!--title属性-->
+        <attr name="titleText" format="string|reference" />
+        <attr name="titleTextColor" format="color|reference" />
+        <attr name="titleTextSize" format="dimension|reference" />
+        <!--提示语属性-->
+        <attr name="tipsText" format="string|reference" />
+        <attr name="tipsTextColor" format="color|reference" />
+        <attr name="tipsTextSize" format="dimension|reference" />
+        <!--按钮属性-->
+        <attr name="btnText" format="string|reference" />
+        <attr name="btnMiniWidth" format="dimension|reference" />
+        <attr name="btnMiniHeight" format="dimension|reference" />
+        <attr name="btnTextSize" format="dimension|reference" />
+        <attr name="btnTextColor" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="ZRCheckBox">
+        <attr name="button_drawable_width" format="reference|dimension" />
+        <attr name="button_drawable_height" format="reference|dimension" />
+        <attr name="android:button" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ZRPieChartLegend">
+        <attr name="gridCount" format="integer" />
+        <!-- 是否固定高度,如果设置为固定高度,那么当内容超过高度时,内部可设置为滑动-->
+        <attr name="isFixedHeight" format="boolean" />
+        <attr name="itemVerticalGap" format="dimension|reference" />
+        <attr name="itemHorizontalGap" format="dimension|reference" />
+        <!-- 示例颜色大小,宽=高-->
+        <attr name="legendColorSize" format="dimension|reference" />
+        <!-- 示例颜色样式,方形or圆形-->
+        <attr name="colorLegendMode">
+            <enum name="square" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <attr name="legendTitleSize" format="dimension|reference" />
+        <attr name="legendTitleColor" format="color|reference" />
+        <attr name="legendTitleMarginStart" format="dimension|reference" />
+        <attr name="legendTitleMarginEnd" format="dimension|reference" />
+
+        <attr name="legendValueSize" format="dimension|reference" />
+        <attr name="legendValueColor" format="color|reference" />
+        <attr name="legendValueTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="medium" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="FilterWidgetBar">
+        <attr name="itemBarSize" format="dimension|reference" />
+        <attr name="itemBarNormalColor" format="color" />
+        <attr name="itemBarSelectedColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseBannerView">
+        <attr name="bannerType" format="enum">
+            <enum name="HomeTopBanner" value="1" />
+            <enum name="HomeMiddleBanner" value="2" />
+            <enum name="IPOCenterBanner" value="3" />
+            <enum name="SimulationBanner" value="4" />
+            <enum name="ZhuoRuiLiveBanner" value="5" />
+            <enum name="StockBanner" value="6" />
+            <enum name="MeBanner" value="7" />
+            <enum name="NewsBanner" value="8" />
+            <enum name="NewsFocusBanner" value="9" />
+            <enum name="FoundMarket" value="10" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="ZRBubbleView">
+        <attr name="border" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ZREditText">
+        <attr name="resetButton" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ZRSmoothProgressBar">
+        <attr name="progressBarColor" format="color|reference"/>
+    </declare-styleable>
+
+</resources>

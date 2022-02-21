@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    tips : 该文件资源主要用于通用性 UI 规范 , 非UI规范调整 , 不要擅自添加修改该文件-->
+
+
+    <!-- 品牌主⾊调: ⽤于主体⽂字/背景⾊块/图形背景颜⾊/下划线/标签-->
+    <color name="brand_main_color">#FF5A67D9</color>
+    <!-- 品牌主体辅助色-->
+    <color name="brand_sub_color1">#FFC0CCE0</color>
+    <color name="brand_sub_color2">#FF4B55B2</color>
+    <color name="brand_sub_color4">#FF272C5E</color>
+    <color name="brand_sub_color5">#FF25253B</color>
+    <color name="brand_sub_color6">#FF1E1E2C</color>
+    <color name="brand_sub_color7">#FF181823</color>
+    <color name="brand_sub_color8">#FF818191</color>
+    <color name="brand_sub_color9">#FFDDE0F7</color>
+    <color name="brand_sub_color10">#FF3F4477</color>
+
+    <!--辅助色-股票涨色/提示/部分标签-->
+    <color name="main_up_color">#FFF24E47</color>
+    <color name="sub_up_color1">#FFFFE2E2</color>
+    <color name="sub_up_color2">#FFF4645E</color>
+    <color name="sub_up_color4">#FFCD3F3F</color>
+    <color name="sub_up_color5">#FF851F1F</color>
+
+    <!--辅助色-股票跌色/提示/部分标签-->
+    <color name="main_down_color">#FF03C086</color>
+    <color name="sub_down_color1">#FFCCF3E7</color>
+    <color name="sub_down_color2">#FF46C8A0</color>
+    <color name="sub_down_color4">#FF108A65</color>
+    <color name="sub_down_color5">#FF0E684D</color>
+
+    <!--股票持平退市无数据-->
+    <color name="main_ping_color">#FFC0CCE0</color>
+
+    <!--辅助色-用于交易/警告/提示/部分标签-->
+    <color name="main_warn_color">#FFFF8E1B</color>
+    <color name="sub_warn_color1">#FFFFE9D2</color>
+    <color name="sub_warn_color2">#FFF6A24C</color>
+    <color name="sub_warn_color4">#FFB56411</color>
+    <color name="sub_warn_color5">#FF6C3A08</color>
+
+    <!--蒙层-->
+    <color name="mask_background">#80000000</color>
+    <!--深色背景大板块分隔色条-->
+    <color name="block_division_background">#FF0E0E12</color>
+    <!--主背景色-->
+    <color name="main_background">#FF181823</color>
+    <!--底部tab色块-->
+    <color name="main_tab_background">#FF1E1E2C</color>
+    <!--模块按压颜色-->
+    <color name="module_pressed_background">#FF121216</color>
+    <!--背景下分隔线-->
+    <color name="main_division_background">#FF20232B</color>
+    <!--输入搜索框、选择控件-->
+    <color name="editing_search_background">#FF1E1E2C</color>
+
+
+    <!--占位符-->
+    <color name="placeholder_text_color">#FF818191</color>
+    <!--大标题/重要正文内容文本-->
+    <color name="main_content_text_color">#FFFFFFFF</color>
+    <!--辅助标题/内容文本/股票代码-->
+    <color name="subtitle_text_color">#FF818191</color>
+    <!--二级标题/二级正文内容-->
+    <color name="second_title_text_color">#FFFFFFFF</color>
+    <!--辅助说明内容-->
+    <color name="description_text_color">#FF818191</color>
+
+    <!-- 不可用文字颜色-->
+    <color name="useless_text_color">#FF3B3B4A</color>
+    <!--主标签未选中文本-->
+    <color name="main_label_unselected_text_color">#FF818191</color>
+    <!--标签选中文本-->
+    <color name="label_selected_text_color">#FFFFFFFF</color>
+</resources>

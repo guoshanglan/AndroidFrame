@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 所有使用ZRSwitchCompat的控件颜色全局统一，无需另外设置相关属性了-->
+    <declare-styleable name="ZRSwitchCompat">
+        <attr name="zr_switchCompatCheckCircleColor" format="color|reference" />
+        <attr name="zr_switchCompatUnCheckCircleColor" format="color|reference" />
+        <attr name="zr_switchCompatCheckBgColor" format="color|reference" />
+        <attr name="zr_switchCompatUnCheckBgColor" format="color|reference" />
+        <attr name="zr_switchCompatCircleBroadWidth" format="dimension|reference" />
+        <attr name="zr_switchCompatChecked" format="boolean" />
+        <attr name="zr_switchCompatAnimationDuration" format="integer" />
+    </declare-styleable>
+
+    <!-- ZRSwitchCompat check 背景色 -->
+    <color name="switch_compat_check_bg_color">@color/brand_main_color</color>
+    <!-- 浅黑色ZRSwitchCompat uncheck 背景色 -->
+    <color name="switch_compat_uncheck_main_bg_color">#FF181823</color>
+    <!-- 深黑色ZRSwitchCompat uncheck 背景色 -->
+    <color name="switch_compat_uncheck_minor_bg_color">#FF1E1E2C</color>
+    <!-- ZRSwitchCompat check 圆圈背景色 -->
+    <color name="switch_compat_check_circle_color">#FFFFFFFF</color>
+    <!-- ZRSwitchCompat uncheck 圆圈背景色 -->
+    <color name="switch_compat_uncheck_circle_color">#FF818191</color>
+
+    <!-- 所有使用ZrSwitchCompat的页面，黑模下：只适配背景为#1E1E2C和#181823下的Style，其它背景和UI确认是否标错-->
+
+    <!--黑模时： 背景为#1E1E2C的下的Style ,默认使用该Style-->
+    <style name="MainZRSwitchCompatStyle">
+        <item name="zr_switchCompatCheckCircleColor">@color/switch_compat_check_circle_color</item>
+        <item name="zr_switchCompatUnCheckCircleColor">@color/switch_compat_uncheck_circle_color</item>
+        <item name="zr_switchCompatCheckBgColor">@color/switch_compat_check_bg_color</item>
+        <item name="zr_switchCompatUnCheckBgColor">@color/switch_compat_uncheck_main_bg_color</item>
+    </style>
+
+    <!-- 黑模时：背景为#181823下的Style-->
+    <style name="MinorZRSwitchCompatStyle">
+        <item name="zr_switchCompatCheckCircleColor">@color/switch_compat_check_circle_color</item>
+        <item name="zr_switchCompatUnCheckCircleColor">@color/switch_compat_uncheck_circle_color</item>
+        <item name="zr_switchCompatCheckBgColor">@color/switch_compat_check_bg_color</item>
+        <item name="zr_switchCompatUnCheckBgColor">@color/switch_compat_uncheck_minor_bg_color</item>
+    </style>
+</resources>

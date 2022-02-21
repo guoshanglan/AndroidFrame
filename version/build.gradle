@@ -1,0 +1,35 @@
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+apply from: 'updateDependencies.gradle'
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.0"
+}
+
+
+gradlePlugin {
+    plugins {
+        version {
+            id = 'com.myframe.version'
+            implementationClass = 'com.myframe.version.DependencyVersionPlugin'
+        }
+    }
+}

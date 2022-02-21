@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="matisse_primary">#263237</color>
+    <color name="matisse_primary_dark">#1D282C</color>
+    <color name="matisse_album_placeholder">#455A64</color>
+    <color name="matisse_album_empty_color">#4DFFFFFF</color>
+    <color name="matisse_item_bgColor">#5764E1</color>
+    <color name="matisse_item_bdColor">#FFFFFF</color>
+    <color name="matisse_page_bg">#232E32</color>
+    <color name="matisse_bottom_toolbar_bg">#34474E</color>
+    <color name="matisse_preview_text">#DEFFFFFF</color>
+    <color name="matisse_preview_text_disable">#4DFFFFFF</color>
+    <color name="matisse_apply_text">#03A9F4</color>
+    <color name="matisse_apply_text_disable">#4D03A9F4</color>
+    <color name="matisse_preview_back_text">#FFFFFF</color>
+    <color name="matisse_capture">#1E1E2C</color>
+    <color name="matisse_check_disable">#808080</color>
+
+</resources>

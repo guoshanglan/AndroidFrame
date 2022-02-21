@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><!--黑白dialog 通用模块按压颜色 圆角 6dp-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dialog_daynight_module_pressed_background" />
+            <corners android:radius="@dimen/dialog_background_radius" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dialog_daynight_module_pressed_background" />
+            <corners android:radius="@dimen/dialog_background_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dialog_daynight_background" />
+            <corners android:radius="@dimen/dialog_background_radius" />
+        </shape>
+    </item>
+</selector>

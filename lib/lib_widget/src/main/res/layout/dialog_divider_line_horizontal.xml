@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge tools:viewBindingIgnore="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View style="@style/DialogDividerLineHorizontal"/>
+
+</merge>

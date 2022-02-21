@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    tips : 该文件资源主要用于定义 widget 中具有个性化的资源 , 或者通用性 规范中未定义的颜色 -->
+    <!--************************* 新建自定义view控件规范 , 与 日模映射 ***************************-->
+    <!--缺省提示文本-->
+    <color name="default_notice_text_color">#FF818191</color>
+    <!-- 通用顶部提示框背景色-->
+    <color name="top_tip_widget_bg">#FFDDE0F7</color>
+    <!-- 通用顶部提示框提示框文字颜色-->
+    <color name="top_tip_widget_text">#FF5A67D9</color>
+    <!-- 普通步骤条连接线-->
+    <color name="step_normal_line_color">#DDE0F7</color>
+    <!-- 普通步骤点颜色-->
+    <color name="step_normal_point_color">#FFFFFF</color>
+    <!-- 步骤完成的字体颜色-->
+    <color name="step_completed_desc_text_color">#FF5A67D9</color>
+    <!-- 悬停分类背景-->
+    <color name="suspension_decoration_background">#FFF6F7FB</color>
+    <!-- 阴影颜色-->
+    <color name="shadow_color">#0D000000</color>
+    <!-- 规范背景色上通用卡片背景-->
+    <color name="skin_card_background">#FFF6F7FB</color>
+    <!-- 全局弹窗title颜色-->
+    <color name="pop_dialog_title_color">#2C2E43</color>
+    <!-- 网络连接断开提示背景 -->
+    <color name="network_error_bg">#FFFFE2E2</color>
+    <color name="network_error_text_color">#FF906060</color>
+    <!--TimeFilterWidget控件使用色-->
+    <color name="custom_time_border_color_normal">#F1F1F1</color>
+    <color name="custom_time_border_color_selected">#DDE0F7</color>
+    <!--banner控件指示器正常颜色-->
+    <color name="banner_normal_color">#5c3F3F56</color>
+    <color name="banner_check_color">#FFFFFFFF</color>
+    <!--ZRBubbleView气泡控件填充颜色-->
+    <color name="bubble_color">#ffff3600</color>
+</resources>

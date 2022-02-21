@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ZRRadioButtonGroup">
+        <attr name="rbg_horizontal_space" format="dimension|reference" />
+        <attr name="rbg_vertical_space" format="dimension|reference" />
+        <attr name="rbg_item_height" format="dimension|reference" />
+        <attr name="rbg_item_width" format="dimension|reference" />
+        <attr name="rbg_span_count" format="integer" />
+        <!--是否使用均分模式-->
+        <attr name="rbg_avg_mode" format="boolean" />
+        <!--是否横屏-->
+        <attr name="rbg_land_mode" format="boolean" />
+    </declare-styleable>
+
+
+    <color name="radio_button_group_normal_bg">#FFF1F1F1</color>
+    <color name="radio_button_group_selected_bg">#FFDDE0F7</color>
+    <color name="radio_button_group_selected_text_color">#FF5764E1</color>
+</resources>

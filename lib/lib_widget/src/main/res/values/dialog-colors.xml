@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义关于弹窗的颜色，不允许随意更改-->
+
+    <!--弹窗阴影色-->
+    <color name="dialog_shadow_color">#1A000000</color>
+
+    <!--单色dialog-->
+    <!--单色dialog 标题文字色-->
+    <color name="dialog_title_text">#FF333333</color>
+    <!--单色dialog 内容文字色-->
+    <color name="dialog_content_text">#FF666666</color>
+    <!--单色dialog 辅助内容文字色-->
+    <color name="dialog_description_text_color">#FF999999</color>
+    <!--单色dialog 背景色-->
+    <color name="dialog_background">#FFFFFFFF</color>
+    <!--单色dialog 背景色下分隔线-->
+    <color name="dialog_division_background">#FFE5E5E5</color>
+    <!--单色dialog 模块按压颜色-->
+    <color name="dialog_module_pressed_background">#FFE5E5E5</color>
+    <!--单色dialog 取消按钮文字颜色-->
+    <color name="dialog_cancel_button">#FF666666</color>
+    <!--单色dialog 确定按钮文字颜色-->
+    <color name="dialog_confirm_button">#FF5A67D9</color>
+    <!--单色dialog 编辑框背景-->
+    <color name="dialog_edit_background">#F1F1F1</color>
+
+    <!--黑白适配 dialog-->
+    <!--黑白dialog 编号文字色 01-->
+    <color name="dialog_daynight_text_color_01">@color/dialog_title_text</color>
+    <!--黑白dialog 编号文字色 02-->
+    <color name="dialog_daynight_text_color_02">@color/dialog_content_text</color>
+    <!--黑白dialog 编号文字色 03-->
+    <color name="dialog_daynight_text_color_03">@color/dialog_description_text_color</color>
+    <!--黑白dialog 编号文字色 04-->
+    <color name="dialog_daynight_text_color_04">@color/dialog_content_text</color>
+    <!--黑白dialog 编号文字色 04-->
+    <color name="dialog_daynight_text_color_05">@color/subtitle_text_color</color>
+    <!--黑白dialog 背景色-->
+    <color name="dialog_daynight_background">@color/dialog_background</color>
+    <!--黑白dialog 背景色下分隔线-->
+    <color name="dialog_daynight_division_background">@color/dialog_division_background</color>
+    <!--黑白dialog 模块按压颜色-->
+    <color name="dialog_daynight_module_pressed_background">@color/dialog_module_pressed_background</color>
+    <!--黑白dialog 取消按钮文字颜色-->
+    <color name="dialog_daynight_cancel_button">@color/dialog_cancel_button</color>
+    <!--黑白dialog 确定按钮文字颜色-->
+    <color name="dialog_daynight_confirm_button">@color/dialog_confirm_button</color>
+    <!--黑白dialog 规范dialog卡片背景色-->
+    <color name="dialog_daynight_skin_card_background">#F6F7FB</color>
+
+
+</resources>

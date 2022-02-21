@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="permission_calender">日曆許可權</string>
+    <string name="permission_call">電話許可權</string>
+    <string name="permission_camera">相機許可權</string>
+    <string name="permission_contact">通訊錄許可權</string>
+    <string name="permission_jump_failed">跳轉失敗，請自行前往設置中心設置</string>
+    <string name="permission_location">定位許可權</string>
+    <string name="permission_microphone">麥克風許可權</string>
+    <string name="permission_phone_status">獲取手機狀態許可權</string>
+    <string name="permission_sensor">感測器許可權</string>
+    <string name="permission_sms">SMS許可權</string>
+    <string name="permission_storage">存儲許可權</string>
+    <string name="permission_undefined">未知許可權</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="premission_str_application_permission">應用權限</string>
+    <string name="prremission_str_refuse">拒絕</string>
+    <string name="prremission_str_delegating">去授權</string>
+    <string name="premission_apply_pre_tips">本功能尚需以下權限方能正常啟用</string>
+</resources>

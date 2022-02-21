@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--radio button selector-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/radio_button_group_selected_bg" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/radio_button_group_selected_bg" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/radio_button_group_selected_bg" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <solid android:color="@color/radio_button_group_normal_bg" />
+        </shape>
+    </item>
+</selector>

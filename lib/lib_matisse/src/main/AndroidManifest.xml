@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zrlib.matisse">
+    <!--适配在Android11之后Intent.resolveActivity()方法返回null导致调用相机失败问题。-->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+</manifest>

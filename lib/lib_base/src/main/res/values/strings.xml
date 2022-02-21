@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="network_anomaly">网络不给力，请稍后重试</string>
+    <string name="press_again_exit">再按一次退出%s</string>
+    <string name="mintues_ahead">%s分钟前</string>
+    <string name="hours_ahead">%s小时前</string>
+    <string name="months_ahead">%s月前</string>
+    <string name="days_ahead">%s天前</string>
+    <string name="times_ago">刚刚</string>
+    <string name="yesterday">昨日</string>
+    <string name="base_lanscape_unlock_tip">点击锁定屏幕</string>
+    <string name="base_lanscape_locked_tip">屏幕已锁定</string>
+    <string name="base_invalid_link">无效链接</string>
+</resources>

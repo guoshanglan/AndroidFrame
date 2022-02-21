@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hc_404">404</string>
+    <string name="hc_make_new_school">打新学堂</string>
+    <string name="hc_smart_trade">智能交易</string>
+    <string name="hc_help_center">帮助中心</string>
+</resources>

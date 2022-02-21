@@ -1,0 +1,18 @@
+import com.myframe.version.VersionConfig
+plugins {
+    id "com.myframe.version"
+}
+apply plugin: 'com.android.library'
+apply from: rootProject.file('common_module.gradle')
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api VersionConfig.arouter
+    implementation VersionConfig.appcompat
+    implementation VersionConfig.gson
+    kapt VersionConfig.arouterCompiler
+    implementation VersionConfig.kotlinxCoroutinesAdapter
+    implementation VersionConfig.kotlinxCoroutinesCore
+    implementation VersionConfig.kotlinxCoroutinesAndroid
+
+}

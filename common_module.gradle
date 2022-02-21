@@ -1,0 +1,14 @@
+apply from: rootProject.file('common_lib.gradle')
+
+kapt {
+    // 在需要使用arouter的module中添加
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+    //启动 kapt 缓存
+    useBuildCache = true
+    javacOptions {
+        //将本地jvm弄大一点 plugin 编译可能会导致堆栈满了的情况
+        option("-Xmaxerrs", 1000)
+    }
+}

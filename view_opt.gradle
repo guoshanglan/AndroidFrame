@@ -1,0 +1,109 @@
+import groovy.util.slurpersupport.GPathResult
+import groovy.util.slurpersupport.Node
+
+project.afterEvaluate {
+//    def placeholders = project.config
+//    println("ResParseTask： project --------------------${project.name}---------------------" + placeholders)
+    android.applicationVariants.all { variant ->
+        def variantName = variant.name.capitalize()
+//        println("${variant.buildType.name}=====================assembleRelease.doLast.begin.========================= ${variantName}")
+        def mergeDebugResourcesTask = project.tasks.findByName("merge" + variantName + "Resources")
+        if (mergeDebugResourcesTask != null) {
+//            println("ResParseTask： mergeResourcesTask -----------------------------------------")
+            def resParseDebugTask = project.tasks.create("ResParse" + variantName + "Task", ResParseTask.class)
+            resParseDebugTask.isDebug = variant.buildType.name == "debug"
+            resParseDebugTask.variantName = variantName
+            resParseDebugTask.files = variant.allRawAndroidResources.files
+            mergeDebugResourcesTask.finalizedBy(resParseDebugTask);
+        }
+    }
+}
+
+
+class ResParseTask extends DefaultTask {
+    File viewNameListFile
+    boolean isDebug
+    String variantName
+    Set<File> files
+    HashSet<String> viewSet = new HashSet<>()
+    // 自己根据输出几个添加
+    List<String> ignoreViewNameList = Arrays.asList("include", "fragment", "merge", "view","DateTimeView")
+
+    @TaskAction
+    void doTask() {
+//        println("ResParseTask： ${variantName}  ResParseTask -----------------------------------------")
+        File distDir = new File(project.buildDir, "tmp_custom_views")
+        if (!distDir.exists()) {
+            distDir.mkdirs()
+        }
+        viewNameListFile = new File(distDir, "custom_view_final.txt")
+        if (viewNameListFile.exists()) {
+            viewNameListFile.delete()
+        }
+        viewNameListFile.createNewFile()
+        viewSet.clear()
+        viewSet.addAll(ignoreViewNameList)
+
+        try {
+            files.forEach { file ->
+                if (file.exists() && file.listFiles() != null) {
+                    File layouts = new File(file, "/layout")
+//                    println("resMergeFile layouts： ${layouts}")
+                    if (layouts.exists() && layouts.listFiles() != null){
+                        for (String path: layouts.list()){
+                            parseNode(layouts.path + File.separator + path)
+                        }
+                    }
+                }
+            }
+        } catch (Throwable e) {
+            e.printStackTrace()
+        }
+
+    }
+
+    void parseNode(String layoutPath) {
+        if (layoutPath != null) {
+//            println("resMergeFile： layoutPath----------${layoutPath}")
+            try {
+                XmlSlurper slurper = new XmlSlurper()
+                GPathResult result = slurper.parse(layoutPath)
+
+                String viewName = result.name();
+                if (viewSet.add(viewName)) {
+                    viewNameListFile.append("${viewName}\n")
+                }
+                if (result.children() != null) {
+                    result.childNodes().forEachRemaining({ o ->
+                        if (o instanceof Node) {
+                            parseLayoutNode(o)
+                        }
+                    })
+                }
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    void parseLayoutNode(Node node) {
+        if (node == null) {
+            return
+        }
+        String viewName = node.name()
+        if (viewSet.add(viewName)) {
+            viewNameListFile.append("${viewName}\n")
+        }
+        if (node.childNodes().size() <= 0) {
+            return
+        }
+        node.childNodes().forEachRemaining({ o ->
+            if (o instanceof Node) {
+                parseLayoutNode(o)
+            }
+        })
+    }
+
+
+}

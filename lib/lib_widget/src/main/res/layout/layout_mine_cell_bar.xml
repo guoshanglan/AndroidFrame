@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    tools:viewBindingIgnore="true"
+    >
+
+    <ImageView
+        android:id="@+id/iv_logo_cell"
+        android:layout_width="30dp"
+        android:layout_height="18dp"
+        android:paddingRight="12dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cell_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_content_text_color"
+        android:textSize="15sp"
+        style="@style/TextStyle.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_logo_cell"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zhuorui.commonwidget.ZRDrawableTextView
+        android:id="@+id/tv_cell_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:drawablePadding="5dp"
+        android:textColor="@color/subtitle_text_color"
+        android:textSize="@dimen/secondaryText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/iv_enter_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:zr_drawable_height="16"
+        app:zr_drawable_width="14" />
+
+    <ImageView
+        android:id="@+id/iv_enter_logo"
+        android:layout_width="8dp"
+        android:layout_height="14dp"
+        android:src="@mipmap/ic_arrow_goto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_space"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_division_background"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</merge>

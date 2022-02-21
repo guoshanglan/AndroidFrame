@@ -1,0 +1,185 @@
+import com.myframe.version.VersionConfig
+
+plugins {
+    id "com.myframe.version"
+}
+apply plugin: 'com.android.application'
+apply from: rootProject.file('app_module.gradle')
+
+android {
+    defaultConfig {
+        applicationId "com.example.myframe"
+        versionCode rootProject.ext.config.versionCode
+        versionName getZRVersionName()
+        buildConfigField "String", "BUILD_NUMBER", "\"" + rootProject.ext.config.packetNumber + "\""
+        buildConfigField "String", "BUILD_D", "\"" + rootProject.ext.config.packetNumber + "\""
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        //productFlavors时必要设置(参数随意)，否则编译不通过
+        flavorDimensions "cesi"
+    }
+
+    // 配置打包的签名
+    signingConfigs {
+        config {
+            keyAlias 'zr'
+            keyPassword 'zr@666'
+            storeFile file('../config/zr_sign.jks')
+            storePassword 'zr@666'
+        }
+    }
+    buildTypes {
+        debug {
+            // 精简资源
+            shrinkResources false
+            // 混淆代码
+            minifyEnabled false
+            // 混淆代码规则文件
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        release {
+            // 精简资源
+            shrinkResources false
+            // 混淆代码
+            minifyEnabled false
+            // 混淆代码规则文件
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    // 配置打包的apk命名规则
+    android.applicationVariants.all {
+        variant ->
+            def runModel = "ok"
+            def appName = "zr"
+            def versionName = "v" + variant.getVersionName()
+            def buildType = variant.buildType.name
+            // 读取网络环境配置文件信息
+            def readConfigRunModel = {
+                File configFile
+                if (buildType == "release") {
+                    configFile = file("buildEnv/releaseFile/assets/config.properties")
+                } else {
+                    configFile = file("buildEnv/debugFile/assets/config.properties")
+                }
+                FileReader reader = new FileReader(configFile)
+                String run_mode = reader.readLine()
+                int index = run_mode.indexOf("=")
+                runModel = run_mode.substring(index + 1)
+            }
+            readConfigRunModel.run()
+            variant.outputs.all { out ->
+                if (buildType == "release" && runModel == "qa") {
+                    //生产包命名
+                    def placeholders = variant.productFlavors[0].metaPropertyValues[0].getValue()
+                    def build = "${placeholders["CHANNEL_VALUE"]}${placeholders["PACKET_NUMBER"]}"
+                    //小版本号
+                    outputFileName = "${appName}_${versionName}_build_${build}.apk"
+                } else if (buildType == "release") {
+                    //release包命名
+                    def placeholders = variant.productFlavors[0].metaPropertyValues[0].getValue()
+                    def build = "${placeholders["CHANNEL_VALUE"]}${placeholders["PACKET_NUMBER"]}"
+                    //小版本号
+                    outputFileName = "${appName}_${versionName}_build_${build}_${runModel}.apk"
+                } else {
+                    //测试包命名
+                    def placeholders = variant.productFlavors[0].metaPropertyValues[0].getValue()
+                    def build = "${placeholders["PACKET_NUMBER"]}"//小版本号
+                    outputFileName = "${appName}_${versionName}_${buildType}_${runModel}_${build}.apk"
+                }
+            }
+    }
+
+    //差异化打包
+    productFlavors {
+        cesi {
+            //测试渠道
+            def time = new Date().format("MMddHH")
+            manifestPlaceholders = [CHANNEL_VALUE: "00", PACKET_NUMBER: time]
+        }
+        general {
+            //通用包
+            manifestPlaceholders = [CHANNEL_VALUE: "00", PACKET_NUMBER: rootProject.ext.config.packetNumber]
+        }
+//        huawei {
+//            manifestPlaceholders = [CHANNEL_VALUE: "01", PACKET_NUMBER: rootProject.ext.packetNumber]
+//        }
+//        yingyongbao {
+//            manifestPlaceholders = [CHANNEL_VALUE: "02", PACKET_NUMBER: rootProject.ext.packetNumber]
+//        }
+    }
+
+    sourceSets {
+        // 用于存放测试资源, 地址等:
+        debug {
+            res.srcDirs = ['buildEnv/debugFile/res']
+            assets.srcDirs = ['buildEnv/debugFile/assets']
+            java.srcDirs = ['buildEnv/debugFile/src']
+
+        }
+        release {
+            res.srcDirs = ['buildEnv/releaseFile/res']
+            assets.srcDirs = ['buildEnv/releaseFile/assets']
+            java.srcDirs = ['buildEnv/releaseFile/src']
+        }
+    }
+
+    // 限制当前module中的资源文件名称前缀
+    resourcePrefix "app_"
+
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+    }
+
+}
+
+// 获取 version name
+def getZRVersionName() {
+    if (!isReleaseBuildType()) {
+        return rootProject.ext.config.versionName + "-debug"
+    }
+    return rootProject.ext.config.versionName
+}
+
+boolean isReleaseBuildType(){
+    for(String s : gradle.startParameter.taskNames) {
+        if (s.contains("Release") | s.contains("release")) {
+            return true
+        }
+    }
+    return false
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // 内存泄漏
+    debugImplementation VersionConfig.leakcanary
+    // bugly
+    implementation VersionConfig.crashreport
+    implementation VersionConfig.nativecrashreport
+    // 检查是否是模拟器
+    implementation VersionConfig.emulatorDetector
+
+    implementation rootProject.ext.appDependence.Skin
+    kapt VersionConfig.arouterCompiler
+
+    implementation rootProject.ext.appDependence.Base
+    implementation rootProject.ext.appDependence.Serveice
+    implementation rootProject.ext.appDependence.Widget
+
+
+    implementation VersionConfig.shadowlayout
+    implementation VersionConfig.appcompat
+    implementation VersionConfig.scaleImageView
+}
+//脚本执行时间是跟着mergeResourcesTask后面进行执行的 , 所以一定只能添加到app壳的gradle当中 , 此时才是获取所有控件的时机
+apply from: rootProject.file('view_opt.gradle')

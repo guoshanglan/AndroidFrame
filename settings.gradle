@@ -1,0 +1,31 @@
+rootProject.name = "My Application"
+include ':app'
+includeBuild("version")
+
+
+
+// ------------------------------- 基础库 -------------------------------
+include 'lib_base'
+project(':lib_base').projectDir = new File(settingsDir, 'lib/lib_base')
+
+include ':lib_navgation'
+project(':lib_navgation').projectDir = new File(settingsDir, 'lib/lib_navgation')
+
+include 'lib_service'
+project(':lib_service').projectDir = new File(settingsDir, 'lib/lib_service')
+
+include ':lib_skin'
+project(':lib_skin').projectDir = new File(settingsDir, 'lib/lib_skin')
+
+include 'lib_pickerview'
+project(':lib_pickerview').projectDir = new File(settingsDir, 'lib/lib_pickerview')
+
+include 'lib_matisse'
+project(':lib_matisse').projectDir = new File(settingsDir, 'lib/lib_matisse')
+
+include 'lib_permission'
+project(':lib_permission').projectDir = new File(settingsDir, 'lib/lib_permission')
+
+include 'lib_widget'
+project(':lib_widget').projectDir = new File(settingsDir, 'lib/lib_widget')
+

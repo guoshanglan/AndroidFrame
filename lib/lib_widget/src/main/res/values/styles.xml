@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--dialog标题文字-->
+    <style name="DialogTitleText" parent="TextStyle.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">22.5dp</item>
+        <item name="android:text">--</item>
+        <item name="android:textColor">@color/dialog_title_text</item>
+        <item name="android:textSize">@dimen/titleText</item>
+    </style>
+
+    <!--dialog内容文字-->
+    <style name="DialogMsgText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:text">--</item>
+        <item name="android:textColor">@color/dialog_content_text</item>
+        <item name="android:textSize">@dimen/importantText</item>
+    </style>
+
+    <!--页面横向分割线-->
+    <style name="MainDividerLineHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/main_division_background</item>
+    </style>
+
+    <!--dialog横向分割线-->
+    <style name="DialogDividerLineHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/dialog_division_background</item>
+    </style>
+
+    <!--dialog竖向分割线-->
+    <style name="DialogDividerLineVertical">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/dialog_division_background</item>
+    </style>
+
+    <!--dialog确定按钮  注意：必须使用TextView当作Button-->
+    <style name="DialogButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:text">--</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/dialog_confirm_button</item>
+        <item name="android:textSize">@dimen/importantText</item>
+        <item name="android:background">@drawable/dialog_button_bg</item>
+    </style>
+
+    <!--dialog 二选一确定按钮  注意：必须使用TextView当作Button-->
+    <style name="DialogConfirmButton" parent="DialogButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/dialog_confirm_button_bg</item>
+    </style>
+
+    <!--dialog 二选一取消按钮  注意：必须使用TextView当作Button-->
+    <style name="DialogCancelButton" parent="DialogConfirmButton">
+        <item name="android:textColor">@color/dialog_cancel_button</item>
+        <item name="android:background">@drawable/dialog_cancel_button_bg</item>
+    </style>
+
+    <!--dialog 单个按钮  注意：必须使用TextView当作Button-->
+    <style name="DialogCenterButton" parent="DialogConfirmButton">
+        <item name="android:textColor">@color/dialog_cancel_button</item>
+        <item name="android:background">@drawable/dialog_center_button_bg</item>
+    </style>
+
+    <!--常规体文字样式 “PingFang-SC-Regular”，字重为“Regular”-->
+    <style name="TextStyle"></style>
+
+    <!--粗体文字样式 “PingFang-SC-Bold”，字重为“Bold” -->
+    <style name="TextStyle.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--中等体文字样式 “PingFang-SC-Medium”，字重为“Medium”-->
+    <style name="TextStyle.Medium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AaDataTipsToptxt" parent="TextStyle.Bold">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:shadowColor">#66000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="SimulationTradingTitleBar">
+        <item name="zr_rightBtnResourceId">@mipmap/ic_serach</item>
+        <!-- TODO 暂时去掉消息按钮，需要时放开注释即可       <item name="zr_right2BtnResourceId">@mipmap/ic_message</item>-->
+    </style>
+
+    <style name="DialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/action_sheet_dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/action_sheet_dialog_exit_anim</item>
+    </style>
+
+    <style name="ZREditText">
+        <item name="android:lineSpacingMultiplier">1.1</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_bg</item>
+        <item name="android:textColorHighlight">#A05A67D9</item>
+    </style>
+
+    <!--  Item带标签符号标题  -->
+    <style name="ItemSymbolTitle" parent="TextStyle.Medium">
+        <item name="android:drawableLeft">@drawable/shape_item_label_symbol</item>
+        <item name="android:drawablePadding">9dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/main_content_text_color</item>
+    </style>
+
+    <!--  占位view  -->
+    <style name="Placeholder">
+        <item name="iconWidth">90dp</item>
+        <item name="iconHeight">90dp</item>
+        <item name="titleTextColor">@color/main_content_text_color</item>
+        <item name="titleTextSize">14sp</item>
+        <item name="tipsTextColor">@color/subtitle_text_color</item>
+        <item name="tipsTextSize">12sp</item>
+        <item name="btnTextSize">12sp</item>
+        <item name="mode">NORMAL</item>
+    </style>
+
+    <style name="Placeholder.Button" parent="Placeholder">
+        <item name="mode">BUTTON</item>
+    </style>
+
+    <!-- 空占位view -->
+    <style name="Placeholder.Empty" parent="Placeholder">
+        <item name="iconRes">@mipmap/ic_nodata</item>
+        <item name="tipsText">@string/no_data</item>
+        <item name="btnTextColor">@color/selector_text_btn_textcolor</item>
+    </style>
+
+    <!-- 极简空占位view -->
+    <style name="Placeholder.Empty.Minimalism" parent="Placeholder.Empty">
+        <item name="mode">MINIMALISM</item>
+    </style>
+
+    <!--  btn空占位view  -->
+    <style name="Placeholder.Empty.Button" parent="Placeholder.Button">
+        <item name="iconRes">@mipmap/ic_nodata</item>
+        <item name="tipsText">@string/no_data</item>
+
+    </style>
+
+    <!--  失败占位view  -->
+    <style name="Placeholder.Fail" parent="Placeholder">
+        <item name="iconRes">@mipmap/ic_network_error</item>
+        <item name="tipsText">@string/load_state_fail</item>
+        <item name="btnText">@string/load_state_reload</item>
+        <item name="btnTextColor">@color/selector_text_btn_textcolor</item>
+    </style>
+
+    <!--  极简失败占位view  -->
+    <style name="Placeholder.Fail.Minimalism" parent="Placeholder.Fail">
+        <item name="mode">MINIMALISM</item>
+    </style>
+
+    <!--  btn失败占位view  -->
+    <style name="Placeholder.Fail.Button" parent="Placeholder.Button">
+        <item name="iconRes">@mipmap/ic_network_error</item>
+        <item name="tipsText">@string/load_state_fail</item>
+        <item name="btnText">@string/load_state_reload</item>
+    </style>
+
+    <!--  占位view默认state btn样式  -->
+    <style name="PlaceholderStateButton" parent="StateBtnStyle.Mian">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:minWidth">152dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+
+</resources>

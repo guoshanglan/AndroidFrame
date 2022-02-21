@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="app_splash_adv_jump_bt_color">#33000000</color>
+    <color name="main_background" tools:ignore="ResourceName">#FFF6F7FB</color>
+</resources>

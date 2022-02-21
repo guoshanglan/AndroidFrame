@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 文字按钮样式 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/text_button_pressed_text_color" android:state_pressed="true" />
+    <item android:color="@color/text_button_useless_text_color" android:state_enabled="false" />
+    <item android:color="@color/text_button_default_text_color" />
+</selector>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dateView"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/bg_bottom_sheet_dialog"
+    android:clickable="true"
+    android:focusable="true"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/cancel"
+        android:textColor="@color/subtitle_text_color"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/confirm"
+        android:textColor="@color/brand_main_color"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.zhuorui.securities.pickerview.date.DatePicker
+        android:id="@+id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  window窗口标记,决定ZRFragment.getDecorView()获取逻辑  -->
+    <string name="window_tag" translatable="false">window</string>
+    <string name="fragment_view" translatable="false">fragment_view</string>
+</resources>

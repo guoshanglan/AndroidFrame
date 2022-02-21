@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/lineView"
+        android:layout_height="@dimen/division_height"
+        android:background="@color/dialog_daynight_division_background" />
+
+    <com.zhuorui.commonwidget.DrawableTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="@dimen/importantText"
+        app:drawableHeight="20dp"
+        app:drawableWidth="20dp"
+        android:id="@+id/tvMenu"
+        style="@style/TextStyle.Medium"
+        android:gravity="center_vertical"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/dialog_daynight_text_color_01" />
+
+</LinearLayout>

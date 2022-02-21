@@ -1,0 +1,23 @@
+ext {
+    config = [
+            'compileSdkVersion': 31,
+            'minSdkVersion'    : 21,
+            'targetSdkVersion' : 31,
+            'versionCode'      : 41001, // 版本号规则：versionName拼上packetNumber
+            'versionName'      : '0.4.1',
+            'packetNumber'     : '001'  // 封包次数
+    ]
+
+    appDependence = [
+            // ------------------------------- 基础库 -------------------------------
+            "Base"                      : project(':lib_base'),
+            "Navgation"                 : project("lib_navgation"),
+            "Serveice"                  : project(":lib_service"),
+            "Skin"                      : project("lib_skin"),
+            "PickerView"                : project("lib_pickerview"),
+            "Matisse"                   : project(':lib_matisse'),
+            "Permission"                : project(':lib_permission'),
+            "Widget"                    : project(':lib_widget'),
+
+    ]
+}

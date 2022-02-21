@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--交易选择账户类型控件-->
+    <color name="select_account_widget_select_text">@color/brand_main_color</color>
+    <color name="select_account_widget_normal_text">#FF333333</color>
+</resources>

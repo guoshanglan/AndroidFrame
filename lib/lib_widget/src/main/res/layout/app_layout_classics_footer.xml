@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#eee"
+    tools:paddingBottom="20dp"
+    tools:paddingTop="20dp"
+    tools:parentTag="android.widget.RelativeLayout"
+    tools:viewBindingIgnore="true">
+
+    <ImageView
+        android:id="@+id/srl_classics_arrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/srl_classics_title"
+        android:layout_toLeftOf="@+id/srl_classics_title"
+        android:contentDescription="@android:string/untitled"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/srl_classics_progress"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toStartOf="@+id/srl_classics_title"
+        android:layout_toLeftOf="@+id/srl_classics_title"
+        android:contentDescription="@android:string/untitled"
+        android:visibility="gone"
+        tools:src="@android:drawable/stat_notify_sync"
+        tools:tint="#666" />
+
+    <TextView
+        android:id="@+id/srl_classics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxLines="1"
+        android:text="@string/srl_header_pulling"
+        android:textColor="#818191"
+        android:textSize="10sp" />
+
+</merge>

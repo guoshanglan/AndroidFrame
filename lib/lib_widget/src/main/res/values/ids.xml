@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--盘口 id 群-->
+    <item name="mk_drawable_layout" type="id" />
+    <item name="mk_name" type="id" />
+    <item name="mk_code" type="id" />
+    <item name="mk_sub_name" type="id" />
+    <item name="mk_sub_image" type="id" />
+    <item name="mk_value" type="id" />
+
+    <!--盘口 价格 id 群-->
+    <item name="mk_price" type="id" />
+    <item name="mk_logo" type="id" />
+    <item name="mk_currency_code" type="id" />
+    <item name="mk_exchange" type="id" />
+    <item name="mk_status" type="id" />
+
+    <item name="mk_diff_price" type="id" />
+    <item name="mk_diff_rate" type="id" />
+
+    <item name="mk_market_name" type="id" />
+    <item name="mk_market_diff_rate" type="id" />
+
+    <!--买卖盘 id 群-->
+    <item name="mk_file_title" type="id" />
+    <item name="mk_file_price" type="id" />
+    <item name="mk_file_num" type="id" />
+
+    <!--明细 id 群-->
+    <item name="mk_detail_time" type="id" />
+    <item name="mk_detail_price" type="id" />
+    <item name="mk_detail_volume" type="id" />
+    <item name="mk_detail_volume_image" type="id" />
+
+</resources>

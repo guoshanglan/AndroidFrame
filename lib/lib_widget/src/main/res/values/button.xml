@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    tips : 该文件资源主要用于通用性按钮交互状态UI规范, 非UI规范调整 , 不要擅自添加修改该文件-->
+
+    <!--  文字按钮  -->
+    <!--  默认颜色  -->
+    <color name="text_button_default_text_color">#FF5A67D9</color>
+    <!--  点击颜色  -->
+    <color name="text_button_pressed_text_color">#FF5A67D9</color>
+    <!--  禁用颜色  -->
+    <color name="text_button_useless_text_color">#665A67D9</color>
+
+    <!--  主按钮  -->
+    <!--  背景色-默认  -->
+    <color name="main_button_default_color">#FF5A67D9</color>
+    <!--  背景色-按压  -->
+    <color name="main_button_pressed_color">#FF4B55B2</color>
+    <!--  背景色-禁用  -->
+    <color name="main_button_useless_color">#665A67D9</color>
+    <!--  文字颜色-默认  -->
+    <color name="main_button_text_color">#FFFFFFFF</color>
+    <!--  文字颜色-按压  -->
+    <color name="main_button_pressed_text_color">#FFFFFFFF</color>
+    <!--  文字颜色-禁用  -->
+    <color name="main_button_useless_text_color">#66FFFFFF</color>
+
+    <!--  次按钮1  -->
+    <!--  背景色-默认  -->
+    <color name="sec1_button_default_color">#00000000</color>
+    <!--  背景色-按压  -->
+    <color name="sec1_button_pressed_color">#FFEEEFFB</color>
+    <!--  背景色-禁用  -->
+    <color name="sec1_button_useless_color">#00000000</color>
+    <!--  线框色-默认  -->
+    <color name="sec1_button_stroke_color">#FF5A67D9</color>
+    <!--  线框色-按压  -->
+    <color name="sec1_button_pressed_stroke_color">#FF5A67D9</color>
+    <!--  线框色-禁用  -->
+    <color name="sec1_button_useless_stroke_color">#665A67D9</color>
+    <!--  文字色-默认  -->
+    <color name="sec1_button_text_color">@color/text_button_default_text_color</color>
+    <!--  文字色-按压  -->
+    <color name="sec1_button_pressed_text_color">@color/text_button_pressed_text_color</color>
+    <!--  文字色-禁用  -->
+    <color name="sec1_button_useless_text_color">@color/text_button_useless_text_color</color>
+
+    <!--  次按钮2  -->
+    <!--  背景色-默认  -->
+    <color name="sec2_button_default_color">#FFF1F1F1</color>
+    <!--  背景色-按压  -->
+    <color name="sec2_button_pressed_color">#FFDBDBDB</color>
+    <!--  背景色-禁用  -->
+    <color name="sec2_button_useless_color">#66F1F1F1</color>
+    <!--  文字色-默认  -->
+    <color name="sec2_button_text_color">#FF333333</color>
+    <!--  文字色-按压  -->
+    <color name="sec2_button_pressed_text_color">#FF333333</color>
+    <!--  文字色-禁用  -->
+    <color name="sec2_button_useless_text_color">#66333333</color>
+
+    <!--  次按钮3  -->
+    <!--  背景色-默认  -->
+    <color name="sec3_button_default_color">#FFDDE0F7</color>
+    <!--  背景色-按压  -->
+    <color name="sec3_button_pressed_color">#FFCFD3F3</color>
+    <!--  背景色-禁用  -->
+    <color name="sec3_button_useless_color">#FFDDE0F7</color>
+    <!--  文字色-默认  -->
+    <color name="sec3_button_text_color">#FF5A67D9</color>
+    <!--  文字色-按压  -->
+    <color name="sec3_button_pressed_text_color">#FF5A67D9</color>
+    <!--  文字色-禁用  -->
+    <color name="sec3_button_useless_text_color">#665A67D9</color>
+
+    <!--  黄色按钮  -->
+    <!--  背景色-默认  -->
+    <color name="yel_button_default_color">#FFFF8E1B</color>
+    <!--  背景色-按压  -->
+    <color name="yel_button_pressed_color">#995B1E</color>
+    <!--  背景色-禁用  -->
+    <color name="yel_button_useless_color">#FFC68D</color>
+    <!--  文字色-默认  -->
+    <color name="yel_button_text_color">#FFFFFF</color>
+    <!--  文字色-禁用  -->
+    <color name="yel_button_useless_text_color">#FFFFFF</color>
+
+    <!--  黑白按钮  -->
+    <!--  背景色-默认  -->
+    <color name="bw_button_default_color">#FFFFFF</color>
+    <!--  背景色-按压  -->
+    <color name="bw_button_pressed_color">#DBDBDB</color>
+    <!--  背景色-禁用  -->
+    <color name="bw_button_useless_color">#333333</color>
+    <!--  文字色-默认  -->
+    <color name="bw_button_text_color">#333333</color>
+    <!--  文字色-禁用  -->
+    <color name="bw_button_useless_text_color">#DBDBDB</color>
+
+    <style name="BtnStyle">
+        <item name="android:textSize">@dimen/button_def_textsize</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 文字按钮样式 -->
+    <style name="BtnStyle.Text" parent="BtnStyle">
+        <item name="android:textColor">@color/selector_text_btn_textcolor</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="StateBtnStyle" parent="BtnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="radius">@dimen/button_radius</item>
+    </style>
+
+    <!-- 主按钮样式 -->
+    <style name="StateBtnStyle.Mian" parent="StateBtnStyle">
+        <item name="normalBackgroundColor">@color/main_button_default_color</item>
+        <item name="pressedBackgroundColor">@color/main_button_pressed_color</item>
+        <item name="unableBackgroundColor">@color/main_button_useless_color</item>
+        <item name="normalTextColor">@color/main_button_text_color</item>
+        <item name="pressedTextColor">@color/main_button_pressed_text_color</item>
+        <item name="unableTextColor">@color/main_button_useless_text_color</item>
+    </style>
+
+    <!--  次按钮样式1（线框）  -->
+    <style name="StateBtnStyle.Sec1" parent="StateBtnStyle">
+        <item name="normalBackgroundColor">@android:color/transparent</item>
+        <item name="pressedBackgroundColor">@color/sec1_button_pressed_color</item>
+        <item name="unableBackgroundColor">@android:color/transparent</item>
+        <item name="normalTextColor">@color/sec1_button_text_color</item>
+        <item name="pressedTextColor">@color/sec1_button_pressed_text_color</item>
+        <item name="unableTextColor">@color/sec1_button_useless_text_color</item>
+        <item name="normalStrokeColor">@color/sec1_button_stroke_color</item>
+        <item name="pressedStrokeColor">@color/sec1_button_pressed_stroke_color</item>
+        <item name="unableStrokeColor">@color/sec1_button_useless_stroke_color</item>
+        <item name="normalStrokeWidth">1dp</item>
+        <item name="pressedStrokeWidth">1dp</item>
+        <item name="unableStrokeWidth">1dp</item>
+    </style>
+
+    <!--  次按钮样式2（白模：#F1F1F1；黑模：#2C2E43） -->
+    <style name="StateBtnStyle.Sec2" parent="StateBtnStyle">
+        <item name="normalBackgroundColor">@color/sec2_button_default_color</item>
+        <item name="pressedBackgroundColor">@color/sec2_button_pressed_color</item>
+        <item name="unableBackgroundColor">@color/sec2_button_useless_color</item>
+        <item name="normalTextColor">@color/sec2_button_text_color</item>
+        <item name="pressedTextColor">@color/sec2_button_pressed_text_color</item>
+        <item name="unableTextColor">@color/sec2_button_useless_text_color</item>
+    </style>
+
+    <!-- 次按钮样式3（白模：#DDE0F7；黑模：#1E1E2C） -->
+    <style name="StateBtnStyle.Sec3" parent="StateBtnStyle">
+        <item name="normalBackgroundColor">@color/sec3_button_default_color</item>
+        <item name="pressedBackgroundColor">@color/sec3_button_pressed_color</item>
+        <item name="unableBackgroundColor">@color/sec3_button_useless_color</item>
+        <item name="normalTextColor">@color/sec3_button_text_color</item>
+        <item name="pressedTextColor">@color/sec3_button_pressed_text_color</item>
+        <item name="unableTextColor">@color/sec3_button_useless_text_color</item>
+    </style>
+
+    <!--  黄色按钮样式 -->
+    <style name="StateBtnStyle.Yellow" parent="TextStyle.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@null</item>
+        <item name="normalBackgroundColor">@color/yel_button_default_color</item>
+        <item name="pressedBackgroundColor">@color/yel_button_pressed_color</item>
+        <item name="unableBackgroundColor">@color/yel_button_useless_color</item>
+        <item name="normalTextColor">@color/yel_button_text_color</item>
+        <item name="pressedTextColor">@color/yel_button_useless_text_color</item>
+        <item name="unableTextColor">@color/yel_button_useless_text_color</item>
+        <item name="radius">0dp</item>
+        <item name="android:textSize">@dimen/button_def_textsize</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--  黑白按钮样式 -->
+    <style name="StateBtnStyle.Black_White" parent="TextStyle.Medium">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@null</item>
+        <item name="normalBackgroundColor">@color/bw_button_default_color</item>
+        <item name="pressedBackgroundColor">@color/bw_button_pressed_color</item>
+        <item name="unableBackgroundColor">@color/bw_button_useless_color</item>
+        <item name="normalTextColor">@color/bw_button_text_color</item>
+        <item name="pressedTextColor">@color/bw_button_text_color</item>
+        <item name="unableTextColor">@color/bw_button_useless_text_color</item>
+        <item name="radius">0dp</item>
+        <item name="android:textSize">@dimen/button_def_textsize</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+</resources>
