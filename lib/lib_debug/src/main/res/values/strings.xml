@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="db_config" tools:ignore="ExtraTranslation,MissingTranslation">数据库预览</string>
+    <string name="skin_config" tools:ignore="ExtraTranslation,MissingTranslation">换肤</string>
+    <string name="net_config" tools:ignore="ExtraTranslation,MissingTranslation">网络环境配置</string>
+    <string name="language_config" tools:ignore="ExtraTranslation,MissingTranslation">语言</string>
+    <string name="term_config" tools:ignore="ExtraTranslation,MissingTranslation">码表</string>
+    <string name="http_config" tools:ignore="ExtraTranslation,MissingTranslation">http</string>
+    <string name="info_config" tools:ignore="ExtraTranslation,MissingTranslation">App信息</string>
+    <string name="fps_config" tools:ignore="ExtraTranslation,MissingTranslation">慢trace</string>
+    <string name="profile_config" tools:ignore="ExtraTranslation,MissingTranslation">profile(开关)</string>
+    <string name="develop_config" tools:ignore="ExtraTranslation,MissingTranslation">开发者选项</string>
+
+    <string name="occurrence_time" tools:ignore="ExtraTranslation,MissingTranslation">occurrence time %s</string>
+    <string name="cost_time" tools:ignore="ExtraTranslation,MissingTranslation">cost:   %sms</string>
+    <!--jsonviewer-->
+    <string name="dk_jsonViewer_icon_plus" translatable="false">expand</string>
+    <string name="dk_jsonViewer_icon_minus">collapse</string>
+
+    <string name="crash_canary_display_activity_label">Crashes</string>
+    <string name="crash_canary_title">Crash in %s</string>
+    <string name="crash_canary_message">Are you sure you want to delete all Crashes</string>
+    <string name="crash_canary_delete_all">Delete all</string>
+    <string name="crash_canary_no">取消</string>
+    <string name="crash_canary_yes">确定</string>
+</resources>

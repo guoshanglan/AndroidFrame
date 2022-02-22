@@ -18,6 +18,6 @@ ext {
             "Matisse"                   : project(':lib_matisse'),
             "Permission"                : project(':lib_permission'),
             "Widget"                    : project(':lib_widget'),
-
+            "Debug"                  : project("lib_debug"),
     ]
 }

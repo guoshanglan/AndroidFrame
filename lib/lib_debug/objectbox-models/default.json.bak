@@ -1,0 +1,55 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8594059101510377493",
+      "lastPropertyId": "5:5350891884390815893",
+      "name": "JankInfo",
+      "properties": [
+        {
+          "id": "1:1876609128852846685",
+          "name": "dbId",
+          "type": 6,
+          "flags": 3
+        },
+        {
+          "id": "2:2427341246535229279",
+          "name": "occurredTime",
+          "type": 6,
+          "flags": 2
+        },
+        {
+          "id": "3:8323110108727250045",
+          "name": "frameCost",
+          "type": 5,
+          "flags": 2
+        },
+        {
+          "id": "4:2634713953898967439",
+          "name": "resolved",
+          "type": 1,
+          "flags": 4
+        },
+        {
+          "id": "5:5350891884390815893",
+          "name": "stackCountEntries",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:8594059101510377493",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

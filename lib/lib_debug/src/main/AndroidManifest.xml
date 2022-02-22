@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhuorui.securties.debug">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application>
+
+        <activity android:name="com.zhuorui.securties.debug.netreference.ZRNetConfigActivity" />
+
+        <activity android:name="com.zhuorui.securties.debug.info.ZRInfoConfigActivity"/>
+
+        <activity android:name="com.zhuorui.securties.debug.fps.view.JankStackInfosActivity"/>
+
+        <activity android:name="com.zhuorui.securties.debug.fps.view.JankStackDetailActivity"/>
+
+        <activity android:name=".net.ZRNetDetailActivity"/>
+
+        <activity android:name=".crashcanary.CrashInfoActivity"/>
+
+
+        <provider
+            android:name=".ZRDebugProvider"
+            android:authorities="${applicationId}.lib_debug.provider"
+            android:exported="false"
+            android:multiprocess="true" />
+    </application>
+
+
+</manifest>

@@ -1,0 +1,41 @@
+import com.myframe.version.VersionConfig
+
+plugins {
+    id "com.myframe.version"
+}
+apply plugin: 'com.android.library'
+apply from: rootProject.file('common_module.gradle')
+
+kapt {
+    // 在需要使用arouter的module中添加
+    arguments {
+        arg("AROUTER_MODULE_NAME", "debug")
+    }
+    //启动 kapt 缓存
+    useBuildCache = true
+    javacOptions {
+        option("-Xmaxerrs", 500)
+    }
+}
+
+dependencies {
+
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation VersionConfig.appcompat
+    implementation rootProject.ext.appDependence.Base
+    implementation rootProject.ext.appDependence.Serveice
+    implementation rootProject.ext.appDependence.Skin
+    debugImplementation VersionConfig.uetool
+    releaseImplementation VersionConfig.uetoolnoop
+    implementation VersionConfig.supportDesign
+
+    annotationProcessor VersionConfig.objectboxProcessor
+    debugImplementation VersionConfig.objectbrowser
+    releaseApi VersionConfig.objectbox
+    kapt VersionConfig.arouterCompiler
+    //https://github.com/amitshekhariitbhu/Android-Debug-Database
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    debugImplementation 'com.amitshekhar.android:debug-db-encrypt:1.0.6'
+}
+// 配置在 dependencies 的下面
+apply plugin: 'io.objectbox'

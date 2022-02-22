@@ -29,3 +29,5 @@ project(':lib_permission').projectDir = new File(settingsDir, 'lib/lib_permissio
 include 'lib_widget'
 project(':lib_widget').projectDir = new File(settingsDir, 'lib/lib_widget')
 
+include 'lib_debug'
+project(':lib_debug').projectDir = new File(settingsDir, 'lib/lib_debug')

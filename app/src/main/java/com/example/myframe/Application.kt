@@ -29,7 +29,7 @@ class Application : BaseApplication() {
     @DelicateCoroutinesApi
     override fun afterInit() {
         // 初始化换肤
-       // initSkin()
+        //initSkin()
     }
 
     override fun app2Foreground() {
