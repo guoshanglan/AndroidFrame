@@ -1,21 +1,9 @@
 *.iml
 .gradle
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+*.idea
+**/build
 .DS_Store
 /build
 /captures
 .externalNativeBuild
-.cxx
-local.properties
-
-# Project exclude paths
-/lib/lib_navgation/build/
-/lib/lib_navgation/build/intermediates/javac/debug/classes/
-/lib/lib_permission/build/
-/lib/lib_permission/build/intermediates/javac/debug/classes/
