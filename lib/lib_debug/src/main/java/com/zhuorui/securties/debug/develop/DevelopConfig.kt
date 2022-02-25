@@ -9,9 +9,6 @@ import com.zhuorui.securties.debug.R
 import java.lang.Exception
 
 /**
- * DevelopConfig
- * @author Martin
- * @email hy569835826@163.com
  * @descraption
  * @time  9:34
  */

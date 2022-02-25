@@ -22,8 +22,6 @@ import com.zrlib.matisse.ui.adapter.PreviewPathPagerAdapter
 import java.util.*
 
 /**
- *    author : liuwei
- *    e-mail : vsanliu@foxmail.com
  *    date   : 2020/8/18 11:09
  *    desc   : 查看大图页面
  */

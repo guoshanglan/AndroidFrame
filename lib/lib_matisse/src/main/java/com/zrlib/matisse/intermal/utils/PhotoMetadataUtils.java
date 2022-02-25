@@ -16,6 +16,7 @@
  */
 package com.zrlib.matisse.intermal.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -27,8 +28,6 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
 import android.util.Log;
-
-import com.zhuorui.securities.base2app.ex.ResourceKt;
 import com.zrlib.matisse.MimeType;
 import com.zrlib.matisse.R;
 import com.zrlib.matisse.filter.Filter;
@@ -42,6 +41,8 @@ import java.io.InputStream;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
+
+import base2app.ex.ResourceKt;
 
 public final class PhotoMetadataUtils {
     private static final String TAG = PhotoMetadataUtils.class.getSimpleName();
@@ -164,6 +165,7 @@ public final class PhotoMetadataUtils {
         }
     }
 
+    @SuppressLint("Range")
     public static String getPath(ContentResolver resolver, Uri uri) {
         if (uri == null) {
             return null;

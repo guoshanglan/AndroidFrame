@@ -175,7 +175,7 @@ dependencies {
     implementation rootProject.ext.appDependence.Base
     implementation rootProject.ext.appDependence.Serveice
     implementation rootProject.ext.appDependence.Widget
-
+    implementation rootProject.ext.appDependence.Matisse
 
     implementation VersionConfig.shadowlayout
     implementation VersionConfig.appcompat

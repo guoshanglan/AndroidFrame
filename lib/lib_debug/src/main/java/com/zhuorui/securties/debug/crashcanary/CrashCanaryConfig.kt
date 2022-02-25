@@ -5,8 +5,6 @@ import android.content.Intent
 import com.zhuorui.securties.debug.IDebugKit
 import com.zhuorui.securties.debug.R
 /**
- * @author xuzuoliang
- * @email micrason@163.com
  * @date 2022/1/20 15:34
  * @desc
  */

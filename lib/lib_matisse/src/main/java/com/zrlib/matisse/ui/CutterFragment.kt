@@ -20,8 +20,6 @@ import com.zrlib.matisse.intermal.utils.SingleMediaScanner
 
 
 /**
- *    author : liuwei
- *    e-mail : vsanliu@foxmail.com
  *    date   : 2020/9/10 15:27
  *    desc   : 图片剪裁
  */

@@ -7,8 +7,6 @@ import android.view.MotionEvent
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
 
 /**
- *    author : liuwei
- *    e-mail : vsanliu@foxmail.com
  *    date   : 2020/9/23 14:13
  *    desc   : 原图预览View
  */

@@ -8,11 +8,11 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.fragment.app.Fragment
+import base2app.ex.blod
+import base2app.ex.color
+import base2app.ex.dp2px
+import base2app.ex.text
 import com.zhuorui.commonwidget.dialog.MessageDialog
-import com.zhuorui.securities.base2app.ex.blod
-import com.zhuorui.securities.base2app.ex.color
-import com.zhuorui.securities.base2app.ex.dp2px
-import com.zhuorui.securities.base2app.ex.text
 import com.zrlib.permission.bean.Permission
 
 /**

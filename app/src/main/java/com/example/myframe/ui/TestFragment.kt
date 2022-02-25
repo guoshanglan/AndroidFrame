@@ -3,12 +3,16 @@ package com.example.myframe.ui
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.INewArguments
+import base2app.ex.setSafeClickListener
 import base2app.viewbinding.viewBinding
 import com.alibaba.android.arouter.facade.annotation.Route
 import base2app.ui.fragment.ZRMvpFragment
 import com.example.myframe.R
 import com.example.myframe.databinding.FragmentTestBinding
 import com.zrlib.lib_service.test.TestRouterPath
+import com.zrlib.matisse.Matisse
+import com.zrlib.matisse.MimeType
+import com.zrlib.matisse.intermal.entity.CaptureStrategy
 
 /**
 
@@ -44,6 +48,20 @@ class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.la
         super.onViewCreatedOnly(view, savedInstanceState)
         val name = arguments?.getString("data")
         binding.test.text = name ?: "无数据"
+        binding.test.setSafeClickListener {
+            Matisse.from(requireContext())
+            .choose(MimeType.of(MimeType.JPEG, MimeType.PNG))
+            .showSingleMediaType(true)
+            .maxSelectable(9)
+            .capture(false)
+            .countable(true, false)
+            .setOnResultListener { _, pathList ->
+                pathList.forEachIndexed { _, path ->
+
+                }
+            }
+            .forResult(100)
+        }
     }
 
     override fun inOpenAccountTab(): Boolean {

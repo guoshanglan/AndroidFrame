@@ -16,6 +16,7 @@
  */
 package com.zrlib.matisse.intermal.entity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
@@ -24,9 +25,10 @@ import android.os.Parcelable;
 
 import androidx.annotation.Nullable;
 
-import com.zhuorui.securities.base2app.ex.ResourceKt;
 import com.zrlib.matisse.R;
 import com.zrlib.matisse.intermal.loader.AlbumLoader;
+
+import base2app.ex.ResourceKt;
 
 
 public class Album implements Parcelable {
@@ -69,7 +71,7 @@ public class Album implements Parcelable {
      * This method is not responsible for managing cursor resource, such as close, iterate, and so on.
      */
     public static Album valueOf(Cursor cursor) {
-        String clumn = cursor.getString(cursor.getColumnIndex(AlbumLoader.COLUMN_URI));
+        @SuppressLint("Range") String clumn = cursor.getString(cursor.getColumnIndex(AlbumLoader.COLUMN_URI));
         return new Album(
                 cursor.getString(cursor.getColumnIndex("bucket_id")),
                 Uri.parse(clumn != null ? clumn : ""),

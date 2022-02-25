@@ -1,8 +1,6 @@
 package com.zrlib.matisse.ui
 
 /**
- *    author : liuwei
- *    e-mail : vsanliu@foxmail.com
  *    date   : 2020/8/18 13:03
  *    desc   :
  */

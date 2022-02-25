@@ -19,8 +19,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-
-import com.zhuorui.securities.base2app.ex.ResourceKt;
 import com.zrlib.matisse.R;
 import com.zrlib.matisse.intermal.entity.IncapableCause;
 import com.zrlib.matisse.intermal.entity.Item;
@@ -32,6 +30,8 @@ import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import base2app.ex.ResourceKt;
 
 @SuppressWarnings("unused")
 public class SelectedItemCollection {
