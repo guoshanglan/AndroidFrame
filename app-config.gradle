@@ -13,11 +13,15 @@ ext {
             "Base"                      : project(':lib_base'),
             "Navgation"                 : project("lib_navgation"),
             "Serveice"                  : project(":lib_service"),
-            "Skin"                      : project("lib_skin"),
-            "PickerView"                : project("lib_pickerview"),
+            "Skin"                      : project(":lib_skin"),
+            "PickerView"                : project(":lib_pickerview"),
             "Matisse"                   : project(':lib_matisse'),
             "Permission"                : project(':lib_permission'),
             "Widget"                    : project(':lib_widget'),
-            "Debug"                  : project("lib_debug"),
+            "Debug"                     : project(":lib_debug"),
+
+
+            // ------------------------------- 功能模块库 -------------------------------
+            "Home"                      : project(":module_home"),
     ]
 }

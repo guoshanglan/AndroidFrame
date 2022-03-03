@@ -1,7 +1,6 @@
 package com.example.myframe.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -13,7 +12,6 @@ import base2app.ui.activity.AbsActivity
 import base2app.util.ToastUtil
 import com.example.myframe.R
 import com.zhuorui.securties.skin.ZRSkinManager
-import com.zrlib.lib_service.base.CommService
 
 class MainActivity : AbsActivity(), MainAct {
     override val acContentRootViewId: Int
@@ -34,13 +32,6 @@ class MainActivity : AbsActivity(), MainAct {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        CommService.instance.getNotCNIPLoginState().observe(this) { ip ->
-            if (!ip.isNotCNIPLogin()) {
-                return@observe
-            }
-
-            overridePendingTransition(R.anim.def_h_enter_anim, R.anim.def_h_exit_anim)
-        }
         logd("MainFragment onCreate startTime : " + System.currentTimeMillis())
     }
 

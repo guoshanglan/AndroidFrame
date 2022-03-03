@@ -14,22 +14,23 @@ import androidx.navigation.SingleDestiantion
 import base2app.util.AppUtil
 import base2app.util.ToastUtil
 import base2app.viewbinding.viewBinding
-import com.example.myframe.ui.MainFragmentView.Companion.COMMUNITY
-import com.example.myframe.ui.MainFragmentView.Companion.FIND
-import com.example.myframe.ui.MainFragmentView.Companion.KEY_CHILD_DATA
-import com.example.myframe.ui.MainFragmentView.Companion.KEY_TYPE
-import com.example.myframe.ui.MainFragmentView.Companion.MARKET
-import com.example.myframe.ui.MainFragmentView.Companion.MINE
-import com.example.myframe.ui.MainFragmentView.Companion.TRANSACTION
+import com.example.home.test.view.MainFragmentView.Companion.COMMUNITY
+import com.example.home.test.view.MainFragmentView.Companion.FIND
+import com.example.home.test.view.MainFragmentView.Companion.KEY_CHILD_DATA
+import com.example.home.test.view.MainFragmentView.Companion.KEY_TYPE
+import com.example.home.test.view.MainFragmentView.Companion.MARKET
+import com.example.home.test.view.MainFragmentView.Companion.MINE
+import com.example.home.test.view.MainFragmentView.Companion.TRANSACTION
 import com.example.myframe.view.BottomBar
 import com.example.myframe.view.BottomBarTab
 import com.example.myframe.view.ZoomIconTab
 import base2app.ui.fragment.ZRFragment
 import base2app.ui.fragment.ZRMvpFragment
+import com.example.home.test.ui.TestFragment
+import com.example.home.test.view.MainFragmentView
 import com.example.myframe.R
 import com.example.myframe.databinding.AppFragmentMainBinding
 
-import com.zrlib.lib_service.base.CommService
 import java.lang.ref.SoftReference
 
 /**
@@ -95,12 +96,6 @@ class MainFragment :
         savedInstanceState?.let {
             mSelectType = it.getInt("mSelectType", mSelectType)
         }
-        CommService.instance.getNetworkConnectLiveData().observe(this, { connected ->
-            if (connected) {
-                //网络恢复拉取版本升级，弹窗数据
-                presenter?.loadVersionAndPopData()
-            }
-        })
     }
 
     override fun onViewCreatedOnly(view: View, savedInstanceState: Bundle?) {

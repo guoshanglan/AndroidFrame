@@ -1,33 +1,31 @@
-package com.example.myframe.ui
+package com.example.home.test.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.INewArguments
 import base2app.ex.setSafeClickListener
+import base2app.ex.startTo
 import base2app.viewbinding.viewBinding
-import com.alibaba.android.arouter.facade.annotation.Route
 import base2app.ui.fragment.ZRMvpFragment
-import com.example.myframe.R
-import com.example.myframe.databinding.FragmentTestBinding
-import com.zrlib.lib_service.test.TestRouterPath
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.example.home.R
+import com.example.home.databinding.HomeFragmentTestBinding
+import com.example.home.test.view.MainFragmentView
+import com.example.myframe.ui.MainFragmentPresenter
+import com.zrlib.lib_service.home.HomeRouter
+import com.zrlib.lib_service.home.HomeRouterPath
+import com.zrlib.lib_service.route.route
 import com.zrlib.matisse.Matisse
 import com.zrlib.matisse.MimeType
-import com.zrlib.matisse.intermal.entity.CaptureStrategy
-
-/**
-
-@author: guoshanglan
-@description:
-@date : 2022/2/18 14:57
- */
 
 /**
  * 测试Fragment
  */
-@Route(path = TestRouterPath.TestFragmentPath)
-class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.layout.fragment_test),
+@Route(path = HomeRouterPath.TestFragmentPath)
+class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.layout.home_fragment_test),
     MainFragmentView, INewArguments {
-    private val binding by viewBinding(FragmentTestBinding::bind)
+    private val binding by viewBinding(HomeFragmentTestBinding::bind)
+
     override val createPresenter: MainFragmentPresenter
         get() = MainFragmentPresenter()
     override val getView: MainFragmentView
@@ -49,18 +47,19 @@ class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.la
         val name = arguments?.getString("data")
         binding.test.text = name ?: "无数据"
         binding.test.setSafeClickListener {
-            Matisse.from(requireContext())
-            .choose(MimeType.of(MimeType.JPEG, MimeType.PNG))
-            .showSingleMediaType(true)
-            .maxSelectable(9)
-            .capture(false)
-            .countable(true, false)
-            .setOnResultListener { _, pathList ->
-                pathList.forEachIndexed { _, path ->
-
-                }
-            }
-            .forResult(100)
+           //
+            route<HomeRouter>()?.toSecondFragment("111")?.startTo()
+//            Matisse.from(requireContext())
+//            .choose(MimeType.of(MimeType.JPEG, MimeType.PNG))
+//            .showSingleMediaType(true)
+//            .maxSelectable(9)
+//            .capture(false)
+//            .countable(true, false)
+//            .setOnResultListener { _, pathList ->
+//
+//
+//                }
+//            .forResult(100)
         }
     }
 

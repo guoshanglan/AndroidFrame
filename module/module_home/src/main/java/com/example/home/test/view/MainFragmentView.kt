@@ -1,8 +1,9 @@
-package com.example.myframe.ui
+package com.example.home.test.view
 
 import android.view.View
 import androidx.annotation.IntDef
 import com.zhuorui.securities.base2app.ui.fragment.ZRView
+
 
 /**
  *    date   : 2019/8/16 16:19

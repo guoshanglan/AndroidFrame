@@ -31,3 +31,7 @@ project(':lib_widget').projectDir = new File(settingsDir, 'lib/lib_widget')
 
 include 'lib_debug'
 project(':lib_debug').projectDir = new File(settingsDir, 'lib/lib_debug')
+
+// ------------------------------- 功能模块库 -------------------------------
+include ':module_home'
+project(':module_home').projectDir = new File(settingsDir, 'module/module_home')

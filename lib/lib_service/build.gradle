@@ -5,6 +5,7 @@ plugins {
 apply plugin: 'com.android.library'
 apply from: rootProject.file('common_module.gradle')
 
+
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     api VersionConfig.arouter

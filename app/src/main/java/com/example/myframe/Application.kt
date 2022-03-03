@@ -4,11 +4,9 @@ import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Resources
 import base2app.BaseApplication
-import base2app.ui.SkinConfig
 import base2app.util.AppUtil
-import com.tencent.bugly.crashreport.CrashReport
 import com.zhuorui.securties.skin.ZRSkinManager
-import kotlinx.coroutines.DelicateCoroutinesApi
+
 
 /**
  * 主应用Application
@@ -26,7 +24,6 @@ class Application : BaseApplication() {
     }
 
 
-    @DelicateCoroutinesApi
     override fun afterInit() {
         // 初始化换肤
         //initSkin()

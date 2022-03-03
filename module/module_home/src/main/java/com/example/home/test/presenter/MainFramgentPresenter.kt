@@ -1,5 +1,6 @@
 package com.example.myframe.ui
 
+import com.example.home.test.view.MainFragmentView
 import com.zhuorui.securities.base2app.ui.fragment.ZRPresenter
 
 /**

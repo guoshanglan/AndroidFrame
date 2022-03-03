@@ -1,0 +1,22 @@
+import com.myframe.version.VersionConfig
+plugins {
+    id "com.myframe.version"
+}
+apply plugin: 'com.android.library'
+apply from: rootProject.file('common_module.gradle')
+
+android {
+
+    // 限制当前module中的资源文件名称前缀
+    resourcePrefix "home_"
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation rootProject.ext.appDependence.Base
+
+    implementation rootProject.ext.appDependence.Serveice
+    implementation rootProject.ext.appDependence.Widget
+    implementation rootProject.ext.appDependence.Matisse
+    kapt VersionConfig.arouterCompiler
+}

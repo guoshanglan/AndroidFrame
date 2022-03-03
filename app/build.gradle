@@ -176,7 +176,8 @@ dependencies {
     implementation rootProject.ext.appDependence.Serveice
     implementation rootProject.ext.appDependence.Widget
     implementation rootProject.ext.appDependence.Matisse
-
+    //首页
+    implementation rootProject.ext.appDependence.Home
     implementation VersionConfig.shadowlayout
     implementation VersionConfig.appcompat
     implementation VersionConfig.scaleImageView
