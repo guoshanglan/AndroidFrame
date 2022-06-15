@@ -23,6 +23,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/lib/lib_base" />
+            <option value="$PROJECT_DIR$/lib/lib_debug" />
             <option value="$PROJECT_DIR$/lib/lib_matisse" />
             <option value="$PROJECT_DIR$/lib/lib_navgation" />
             <option value="$PROJECT_DIR$/lib/lib_permission" />
@@ -30,10 +31,10 @@
             <option value="$PROJECT_DIR$/lib/lib_service" />
             <option value="$PROJECT_DIR$/lib/lib_skin" />
             <option value="$PROJECT_DIR$/lib/lib_widget" />
+            <option value="$PROJECT_DIR$/module/module_home" />
             <option value="$PROJECT_DIR$/version" />
           </set>
         </option>
-        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

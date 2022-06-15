@@ -68,14 +68,6 @@ class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.la
         return false
     }
 
-    override fun addTabBubble(tab: Int, bubbleView: View, offX: Int?, offY: Int?): Boolean {
-        return false
-    }
-
-    override fun removeTabBubble(transaction: Int) {
-
-    }
-
     override fun onNewArguments(args: Bundle) {
         val name = args.getString("data")
         binding.test.text = name ?: "无数据"

@@ -3,7 +3,7 @@ apply from: 'app-config.gradle'
 apply plugin: 'com.alibaba.arouter'
 
 buildscript {
-    ext.kotlin_version = '1.5.0'
+    ext.kotlin_version = '1.6.10'
     repositories {
         //        mavenCentral()
 //        jcenter()
@@ -18,13 +18,13 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.1'
+        classpath 'com.android.tools.build:gradle:7.1.2'
         // kotlin
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // arouter
         classpath 'com.alibaba:arouter-register:1.0.2'
 
-        classpath 'io.objectbox:objectbox-gradle-plugin:2.5.1'
+        classpath 'io.objectbox:objectbox-gradle-plugin:3.1.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

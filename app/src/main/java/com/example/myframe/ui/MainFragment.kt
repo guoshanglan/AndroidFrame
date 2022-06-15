@@ -53,10 +53,7 @@ class MainFragment :
      */
     private val tabs = arrayOf(FIND, MARKET, TRANSACTION, COMMUNITY, MINE)
     private val tabName = arrayOf("发现", "市场", "交易", "社区", "我的")
-    /**
-     * tab 汽泡提示View缓存
-     */
-    private var mTabBubbleView: ArrayMap<Int, SoftReference<View>>? = null
+
     private var mSelectType: Int = FIND
 
     override fun isSupportSwipeBack(): Boolean {
@@ -197,43 +194,6 @@ class MainFragment :
 
     override fun inOpenAccountTab(): Boolean {
         return tabs[binding.bottomBar.currentItemPosition] == TRANSACTION
-    }
-
-    /**
-     * 显示tab汽泡提示
-     */
-    override fun addTabBubble(tab: Int, bubbleView: View, offX: Int?, offY: Int?): Boolean {
-        val rootView = if (view is FrameLayout) view as FrameLayout else return false
-        removeTabBubble(tab)
-        val tabView = binding.bottomBar.getItem(tabs.indexOf(tab)) ?: return false
-        val lp = FrameLayout.LayoutParams(
-            FrameLayout.LayoutParams.WRAP_CONTENT,
-            FrameLayout.LayoutParams.WRAP_CONTENT
-        )
-        val location = IntArray(2)
-        tabView.mIcon.getLocationInWindow(location)
-        if (location[0] > 0) {
-            lp.gravity = Gravity.BOTTOM
-            lp.bottomMargin = binding.bottomBar.height + (offY ?: 0)
-            lp.leftMargin = location[0] - (offX ?: 0)
-            rootView.addView(bubbleView, lp)
-            if (mTabBubbleView == null) {
-                mTabBubbleView = ArrayMap()
-            }
-            mTabBubbleView?.put(tab, SoftReference(bubbleView))
-            return true
-        }
-        return false
-    }
-
-    /**
-     * 移除Tab汽泡提示
-     */
-    override fun removeTabBubble(transaction: Int) {
-        val bubbleView = mTabBubbleView?.remove(transaction)?.get() ?: return
-        bubbleView.parent?.let {
-            if (it is ViewGroup) it else null
-        }?.removeView(bubbleView)
     }
 
 

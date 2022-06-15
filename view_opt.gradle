@@ -2,36 +2,33 @@ import groovy.util.slurpersupport.GPathResult
 import groovy.util.slurpersupport.Node
 
 project.afterEvaluate {
-//    def placeholders = project.config
-//    println("ResParseTask： project --------------------${project.name}---------------------" + placeholders)
     android.applicationVariants.all { variant ->
         def variantName = variant.name.capitalize()
-//        println("${variant.buildType.name}=====================assembleRelease.doLast.begin.========================= ${variantName}")
         def mergeDebugResourcesTask = project.tasks.findByName("merge" + variantName + "Resources")
         if (mergeDebugResourcesTask != null) {
-//            println("ResParseTask： mergeResourcesTask -----------------------------------------")
             def resParseDebugTask = project.tasks.create("ResParse" + variantName + "Task", ResParseTask.class)
-            resParseDebugTask.isDebug = variant.buildType.name == "debug"
-            resParseDebugTask.variantName = variantName
             resParseDebugTask.files = variant.allRawAndroidResources.files
-            mergeDebugResourcesTask.finalizedBy(resParseDebugTask);
+            mergeDebugResourcesTask.finalizedBy(resParseDebugTask)
         }
     }
 }
 
 
-class ResParseTask extends DefaultTask {
+abstract class ResParseTask extends DefaultTask {
+    @Internal
     File viewNameListFile
-    boolean isDebug
-    String variantName
+
+    @Internal
     Set<File> files
+
+    @Internal
     HashSet<String> viewSet = new HashSet<>()
     // 自己根据输出几个添加
-    List<String> ignoreViewNameList = Arrays.asList("include", "fragment", "merge", "view","DateTimeView")
+    @Internal
+    List<String> ignoreViewNameList = Arrays.asList("include", "fragment", "merge", "view", "DateTimeView")
 
     @TaskAction
     void doTask() {
-//        println("ResParseTask： ${variantName}  ResParseTask -----------------------------------------")
         File distDir = new File(project.buildDir, "tmp_custom_views")
         if (!distDir.exists()) {
             distDir.mkdirs()
@@ -48,9 +45,8 @@ class ResParseTask extends DefaultTask {
             files.forEach { file ->
                 if (file.exists() && file.listFiles() != null) {
                     File layouts = new File(file, "/layout")
-//                    println("resMergeFile layouts： ${layouts}")
-                    if (layouts.exists() && layouts.listFiles() != null){
-                        for (String path: layouts.list()){
+                    if (layouts.exists() && layouts.listFiles() != null) {
+                        for (String path : layouts.list()) {
                             parseNode(layouts.path + File.separator + path)
                         }
                     }
@@ -64,12 +60,11 @@ class ResParseTask extends DefaultTask {
 
     void parseNode(String layoutPath) {
         if (layoutPath != null) {
-//            println("resMergeFile： layoutPath----------${layoutPath}")
             try {
                 XmlSlurper slurper = new XmlSlurper()
                 GPathResult result = slurper.parse(layoutPath)
 
-                String viewName = result.name();
+                String viewName = result.name()
                 if (viewSet.add(viewName)) {
                     viewNameListFile.append("${viewName}\n")
                 }
@@ -81,7 +76,7 @@ class ResParseTask extends DefaultTask {
                     })
                 }
             } catch (Throwable e) {
-                e.printStackTrace();
+                e.printStackTrace()
             }
 
         }
