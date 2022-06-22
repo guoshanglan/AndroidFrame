@@ -123,8 +123,8 @@ class MainFragment :
                 )
                 TRANSACTION -> BottomBarTab(
                     act,
-                    R.drawable.app_tab_transaction,
-                    R.string.app_open_account
+                    0,
+                  0
                 )
                 FIND -> ZoomIconTab(
                     act,

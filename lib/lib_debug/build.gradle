@@ -28,10 +28,6 @@ dependencies {
     debugImplementation VersionConfig.uetool
     releaseImplementation VersionConfig.uetoolnoop
     implementation VersionConfig.supportDesign
-
-    annotationProcessor VersionConfig.objectboxProcessor
-    debugImplementation VersionConfig.objectbrowser
-    releaseApi VersionConfig.objectbox
     kapt VersionConfig.arouterCompiler
     //https://github.com/amitshekhariitbhu/Android-Debug-Database
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'

@@ -68,12 +68,6 @@ object VersionConfig {
     const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
     // lifecycleExtensions
     const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.1.0"
-    // objectboxProcessor
-    const val objectboxProcessor = "io.objectbox:objectbox-processor:3.1.0"
-    // objectbrowser
-    const val objectbrowser = "io.objectbox:objectbox-android-objectbrowser:3.1.0"
-    // objectbox
-    const val objectbox = "io.objectbox:objectbox-android:3.1.0"
     // uetool
     const val uetool = "me.ele:uetool:1.2.9"
     // uetoolnoop
@@ -122,34 +116,6 @@ object VersionConfig {
     const val kotlinxCoroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
     // kotlinxCoroutinesAdapter
     const val kotlinxCoroutinesAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
-    /* 个推普通版sdk*/
-    // getuiSdk
-    const val getuiSdk = "com.getui:gtsdk:3.2.7.0"
-    /* 个推核心组件*/
-    // getuiCore
-    const val getuiCore = "com.getui:gtc:3.1.7.0"
-    /*个推google play版sdk*/
-    // getuiForGooglePlaySdk
-    const val getuiForGooglePlaySdk = "com.getui:sdk-for-google-play:4.3.9.0"
-    /*google FCM离线推送*/
-    // offlinePushForFbCore
-    const val offlinePushForFbCore = "com.google.firebase:firebase-core:17.0.0"
-    // offlinePushForFbMsg
-    const val offlinePushForFbMsg = "com.google.firebase:firebase-messaging:20.0.0"
-    /*华为离线推送*/
-    // offlinePushForHw
-    const val offlinePushForHw = "com.getui.opt:hwp:3.1.0"
-    // offlinePushForHwCore
-    const val offlinePushForHwCore = "com.huawei.hms:push:6.1.0.300"
-    /*小米离线推送*/
-    // offlinePushForXm
-    const val offlinePushForXm = "com.getui.opt:xmp:3.1.0"
-    /*Oppo离线推送*/
-    // offlinePushForOppo
-    const val offlinePushForOppo = "com.assist-v3:oppo:3.1.0"
-    //vivo离线推送*/
-    // offlinePushForVivo
-    const val offlinePushForVivo = "com.assist-v3:vivo:3.1.0"
     // qq
     const val qq = "com.tencent.tauth:qqopensdk:3.52.0"
     /*二维码*/

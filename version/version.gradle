@@ -64,12 +64,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
     // lifecycleExtensions
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
-    // objectboxProcessor
-    implementation "io.objectbox:objectbox-processor:3.1.0"
-    // objectbrowser
-    implementation "io.objectbox:objectbox-android-objectbrowser:3.1.0"
-    // objectbox
-    implementation "io.objectbox:objectbox-android:3.1.0"
     // uetool
     implementation "me.ele:uetool:1.2.9"
     // uetoolnoop
@@ -118,34 +112,6 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0"
     // kotlinxCoroutinesAdapter
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2"
-    /* 个推普通版sdk*/
-    // getuiSdk
-    implementation "com.getui:gtsdk:3.2.7.0"
-    /* 个推核心组件*/
-    // getuiCore
-    implementation "com.getui:gtc:3.1.7.0"
-    /*个推google play版sdk*/
-    // getuiForGooglePlaySdk
-    implementation "com.getui:sdk-for-google-play:4.3.9.0"
-    /*google FCM离线推送*/
-    // offlinePushForFbCore
-    implementation "com.google.firebase:firebase-core:17.0.0"
-    // offlinePushForFbMsg
-    implementation "com.google.firebase:firebase-messaging:20.0.0"
-    /*华为离线推送*/
-    // offlinePushForHw
-    implementation "com.getui.opt:hwp:3.1.0"
-    // offlinePushForHwCore
-    implementation "com.huawei.hms:push:6.1.0.300"
-    /*小米离线推送*/
-    // offlinePushForXm
-    implementation "com.getui.opt:xmp:3.1.0"
-    /*Oppo离线推送*/
-    // offlinePushForOppo
-    implementation "com.assist-v3:oppo:3.1.0"
-    //vivo离线推送*/
-    // offlinePushForVivo
-    implementation "com.assist-v3:vivo:3.1.0"
     // qq
     implementation "com.tencent.tauth:qqopensdk:3.52.0"
     /*二维码*/

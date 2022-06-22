@@ -25,6 +25,7 @@ import com.zrlib.matisse.MimeType
 class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.layout.home_fragment_test),
     MainFragmentView, INewArguments {
     private val binding by viewBinding(HomeFragmentTestBinding::bind)
+    private val path:String="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F1114%2F0G320105A7%2F200G3105A7-4-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657851921&t=c0af3efd72dae8031969ac3b1355cb2e"
 
     override val createPresenter: MainFragmentPresenter
         get() = MainFragmentPresenter()
@@ -48,7 +49,7 @@ class TestFragment : ZRMvpFragment<MainFragmentView, MainFragmentPresenter>(R.la
         binding.test.text = name ?: "无数据"
         binding.test.setSafeClickListener {
            //
-            route<HomeRouter>()?.toSecondFragment("111")?.startTo()
+            route<HomeRouter>()?.toSecondFragment(path)?.startTo()
 //            Matisse.from(requireContext())
 //            .choose(MimeType.of(MimeType.JPEG, MimeType.PNG))
 //            .showSingleMediaType(true)
